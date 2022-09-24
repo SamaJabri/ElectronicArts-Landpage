@@ -1,0 +1,518 @@
+@font-face {
+  font-family: "ElectronicArtsTextRegular";
+  src: url("../fonts/ElectronicArtsText-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsTextBold";
+  src: url("../fonts/ElectronicArtsText-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsTextLight";
+  src: url("../fonts/ElectronicArtsText-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsDisplayBold";
+  src: url("../fonts/ElectronicArtsDisplay-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsDisplayRegular";
+  src: url("../fonts/ElectronicArtsDisplay-Regular.woff2") format("woff2");
+}
+img {
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "ElectronicArtsDisplayRegular", sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+#question {
+  display: none;
+  position: absolute;
+  top: 4%;
+  width: 100vw;
+  height: 50vh;
+  background-color: #161616;
+  z-index: 999;
+  border-radius: 0.5rem;
+  padding-bottom: 6rem;
+}
+@media screen and (max-width: 1221px) {
+  #question {
+    height: 35vh;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 376px) {
+  #question {
+    width: 100%;
+  }
+}
+#question span {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+}
+#question span a {
+  color: red;
+  cursor: pointer;
+}
+#question p {
+  color: white;
+  font-size: 1.5rem;
+  padding-left: 4rem;
+  font-weight: 300;
+}
+#question .user-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+  width: 80%;
+  margin-left: 6rem;
+}
+@media screen and (max-width: 900px) {
+  #question .user-buttons {
+    margin: 0;
+    padding-right: 2rem;
+  }
+  #question .user-buttons p {
+    font-size: 16px;
+  }
+}
+#question .user-buttons .user-buttons_top {
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+  padding-left: 3rem;
+}
+@media screen and (max-width: 900px) {
+  #question .user-buttons .user-buttons_top {
+    flex-direction: column;
+    width: 100%;
+    height: 25%;
+    padding-top: 12rem;
+  }
+}
+#question .user-buttons .user-buttons_top button {
+  background-color: #161616;
+  border: none;
+  margin-left: 1rem;
+}
+@media screen and (max-width: 900px) {
+  #question .user-buttons .user-buttons_top button {
+    display: flex;
+  }
+  #question .user-buttons .user-buttons_top button svg {
+    width: 1rem;
+    height: 1rem;
+  }
+  #question .user-buttons .user-buttons_top button p {
+    font-size: 0.4rem;
+  }
+}
+#question .user-buttons .user-buttons_top button svg {
+  width: 2rem;
+  height: 2rem;
+}
+#question .user-buttons .user-buttons_top button svg:hover {
+  transition: all 0.5s ease-in;
+  width: 3rem;
+  height: 3rem;
+}
+#question .user-buttons .user-buttons_top button p {
+  color: white;
+  font-size: 1rem;
+}
+#question .user-buttons .user-buttons_bottom {
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+  padding-left: 2rem;
+}
+@media screen and (max-width: 900px) {
+  #question .user-buttons .user-buttons_bottom {
+    flex-direction: column;
+  }
+}
+#question .user-buttons .user-buttons_bottom button {
+  background-color: #161616;
+  border: none;
+}
+#question .user-buttons .user-buttons_bottom button svg {
+  width: 2rem;
+  height: 2rem;
+}
+#question .user-buttons .user-buttons_bottom button svg:hover {
+  transition: all 0.5s ease-in;
+  width: 3rem;
+  height: 3rem;
+}
+#question .user-buttons .user-buttons_bottom button p {
+  color: white;
+  font-size: 1rem;
+}
+@media screen and (max-width: 1221px) {
+  #question {
+    display: block;
+  }
+}
+#question .close {
+  width: 100%;
+  height: 40%;
+}
+#question .close svg {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  width: 1rem;
+  height: 1rem;
+  fill: white;
+}
+@media screen and (max-width: 900px) {
+  #question .close {
+    height: 5%;
+  }
+}
+#question .user-buttons img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.contex {
+  display: none;
+  position: absolute;
+  top: 4%;
+  width: 100vw;
+  height: 50vh;
+  background-color: #161616;
+  z-index: 999;
+  border-radius: 0.5rem;
+}
+@media screen and (max-width: 1221px) {
+  .contex {
+    height: 35vh;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 376px) {
+  .contex {
+    width: 100%;
+  }
+}
+.contex .user-buttons {
+  width: 2rem;
+  height: 12rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 14rem;
+}
+@media screen and (max-width: 900px) {
+  .contex .user-buttons {
+    align-items: flex-end;
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+.contex .user-buttons button {
+  background-color: #161616;
+  border: none;
+}
+@media screen and (max-width: 900px) {
+  .contex .user-buttons button {
+    display: flex;
+  }
+}
+.contex .user-buttons button svg {
+  width: 40%;
+  height: 40%;
+}
+.contex .user-buttons button svg:hover {
+  transition: all 0.5s ease-in;
+  width: 50%;
+  height: 50%;
+}
+@media screen and (max-width: 900px) {
+  .contex .user-buttons button svg {
+    width: 30%;
+    height: 30%;
+  }
+  .contex .user-buttons button svg:hover {
+    transition: all 0.5s ease-in;
+    width: 40%;
+    height: 40%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contex .user-buttons button svg {
+    width: 45%;
+    height: 45%;
+  }
+  .contex .user-buttons button svg:hover {
+    transition: all 0.5s ease-in;
+    width: 55%;
+    height: 55%;
+  }
+  .contex .user-buttons button svg p {
+    font-size: 0.5rem;
+  }
+}
+.contex .user-buttons button p {
+  color: white;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 571px) {
+  .contex .user-buttons {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.contex .close {
+  width: 25%;
+  height: 10%;
+  padding-top: -4rem;
+}
+.contex .close svg {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  width: 1rem;
+  height: 1rem;
+  fill: white;
+}
+.contex .user-buttons {
+  width: 100%;
+  height: 6rem;
+}
+.contex .user-buttons img {
+  width: 6rem;
+  height: 6rem;
+}
+
+#header__main {
+  position: relative;
+}
+#header__main .content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+#header__main .content .main-nav {
+  background-color: #161616;
+  height: 2.5rem;
+}
+#header__main .content .main-nav .main-nav_items {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.9rem;
+  margin-top: 0.7rem;
+  margin-right: 0.5rem;
+}
+#header__main .content .main-nav .main-nav_items li {
+  margin-right: 1.8rem;
+}
+#header__main .content .main-nav .main-nav_items li svg {
+  fill: grey;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+#header__main .content .main-nav .main-nav_items li svg:hover {
+  cursor: pointer;
+  fill: white;
+  transition: fill 0.5s ease-out;
+}
+#header__main .content .main-nav .main-nav_items button {
+  color: #f3f3f3;
+  background-color: #161616;
+  width: 1.3rem;
+  height: 1.1rem;
+  font-size: 1.2rem;
+  border: none;
+}
+#header__main .content .main-nav .main-nav_items img {
+  filter: invert(39%) sepia(5%) saturate(97%) hue-rotate(169deg) brightness(93%) contrast(89%);
+  width: 2rem;
+  height: 1rem;
+}
+#header__main .content .main-nav__inner {
+  background-color: #f3f3f3;
+  height: 3rem;
+}
+#header__main .content .main-nav__inner-items {
+  display: flex;
+  justify-content: flex-start;
+}
+@media only screen and (max-width: 1032px) {
+  #header__main .content .main-nav__inner-items li {
+    display: flex;
+  }
+  #header__main .content .main-nav__inner-items li svg {
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    align-self: center;
+    margin-top: 0.8rem;
+    margin-left: 2rem;
+  }
+  #header__main .content .main-nav__inner-items li button {
+    display: none;
+  }
+  #header__main .content .main-nav__inner-items li img {
+    padding-left: 2rem;
+    width: 80%;
+  }
+}
+#header__main .content .main-nav__inner-items li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2rem;
+}
+#header__main .content .main-nav__inner-items li img {
+  margin-top: 0.8rem;
+}
+#header__main .content .main-nav__inner-items li button {
+  align-self: start;
+  height: 1.2rem;
+  margin: 0.8rem;
+  border: none;
+  font-size: 1.2rem;
+  font-family: "ElectronicArtsTextLight", sans-serif;
+  transition: color 0.5s ease-out;
+}
+#header__main .content .main-nav__inner-items li button svg {
+  display: none;
+}
+#header__main .content .main-nav__inner-items li button .fa-light {
+  display: none;
+}
+#header__main .content .main-nav__inner-items li button .fa-ellipsis-vertical {
+  transition: font-size 0.5s ease-out;
+  padding-right: 2rem;
+}
+#header__main .content .main-nav__inner-items li button ul {
+  visibility: hidden;
+}
+#header__main .content .main-nav__inner-items li button:hover {
+  cursor: pointer;
+  color: #FF4747;
+  background-color: #f3f3f3;
+}
+#header__main .content .main-nav__inner-items li button:hover .fa-ellipsis-vertical {
+  font-size: 1.5rem;
+}
+#header__main .content .main-nav__inner-items li button:hover .fa-sharp {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+#header__main .content .main-nav__inner-items li button:hover ul {
+  margin-top: 0.8rem;
+  visibility: visible;
+  display: flex;
+  z-index: 9998;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.4rem;
+}
+#header__main .content .main-nav__inner-items li button:hover ul li {
+  color: grey;
+}
+#header__main .content .main-nav__inner-items li button:hover ul li ul {
+  display: block;
+  margin: auto;
+}
+#header__main .content .main-nav__inner-items li button:hover ul li ul li {
+  margin: 0.5rem;
+}
+#header__main .content .main-nav__inner-items li button:hover ul li ul li:hover {
+  color: #FF4747;
+}
+
+main .first-section {
+  height: 100vh;
+  width: 100vw;
+}
+main .first-section .image-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 100%;
+  background-image: url("../images/Header/Section-one-background.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media only screen and (max-width: 765px) {
+  main .first-section .image-box {
+    justify-content: flex-end;
+    background-size: cover;
+    background-image: url("../images/Header/Section one background (Small devices).jpg");
+  }
+  main .first-section .image-box img {
+    top: 21rem !important;
+    left: 2rem !important;
+    width: 80% !important;
+  }
+  main .first-section .image-box button {
+    top: 26rem !important;
+    left: 8rem !important;
+    width: 30% !important;
+  }
+}
+main .first-section .image-box img {
+  position: absolute;
+  width: 36rem;
+  top: 15rem;
+  left: 6rem;
+}
+main .first-section .image-box button {
+  background: none;
+  color: #f3f3f3;
+  border: 2px solid #f3f3f3;
+  border-radius: 0.3rem;
+  width: 11.5rem;
+  height: 4.3rem;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 25rem;
+  left: 18rem;
+}
+main .first-section .image-box button:hover {
+  cursor: pointer;
+  color: #f3f3f3;
+  background-color: none;
+  width: 12rem;
+  height: 4.8rem;
+  transition: all 0.1s ease-out;
+}
+main .first-section .image-box button:hover {
+  background: none;
+  color: #f3f3f3;
+  border: 2px solid #f3f3f3;
+  border-radius: 0.3rem;
+  width: 11.5rem;
+  height: 4.3rem;
+  font-size: 1.3rem;
+}
+main .first-section .image-box button:hover:hover {
+  cursor: pointer;
+  color: #f3f3f3;
+  background-color: none;
+  width: 12rem;
+  height: 4.8rem;
+  transition: all 0.1s ease-out;
+}
+
+/*# sourceMappingURL=Header.css.map */
