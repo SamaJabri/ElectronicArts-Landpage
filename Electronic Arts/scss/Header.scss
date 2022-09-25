@@ -1,4 +1,4 @@
-@import "general";
+@import "general.scss";
 
 $string: "display-regular";
 img {
@@ -16,6 +16,7 @@ ul,
 li {
   list-style: none;
 }
+
 #question {
   display: none;
   position: absolute;
@@ -26,6 +27,7 @@ li {
   z-index: 999;
   border-radius: 0.5rem;
   padding-bottom: 6rem;
+
   @media screen and (max-width: 1221px) {
     height: 35vh;
     width: 100%;
@@ -39,7 +41,6 @@ li {
     display: flex;
     justify-content: center;
     font-size: 1.2rem;
-
     color: white;
 
     a {
@@ -61,9 +62,11 @@ li {
     height: 50%;
     width: 80%;
     margin-left: 6rem;
+
     @media screen and (max-width: 900px) {
       margin: 0;
       padding-right: 2rem;
+
       p {
         font-size: 16px;
       }
@@ -83,9 +86,9 @@ li {
 
       button {
         background-color: $color-secondary;
-
         border: none;
         margin-left: 1rem;
+
         @media screen and (max-width: 900px) {
           display: flex;
           svg {
@@ -100,6 +103,7 @@ li {
         svg {
           width: 2rem;
           height: 2rem;
+
           &:hover {
             transition: all 0.5s ease-in;
             width: 3rem;
@@ -117,6 +121,7 @@ li {
       justify-content: space-around;
       width: 75%;
       padding-left: 2rem;
+
       @media screen and (max-width: 900px) {
         flex-direction: column;
       }
@@ -205,7 +210,6 @@ li {
 
     button {
       background-color: $color-secondary;
-
       border: none;
 
       @media screen and (max-width: 900px) {
@@ -318,7 +322,6 @@ li {
           background-color: $color-secondary;
           width: 1.3rem;
           height: 1.1rem;
-
           font-size: 1.2rem;
           border: none;
         }
@@ -333,12 +336,14 @@ li {
 
       &__inner {
         background-color: $color-primary;
-        height: 3rem;
+        height: 4rem;
 
         &-items {
           display: flex;
-
+          align-items: center;
+          height: 75%;
           justify-content: flex-start;
+
           @media only screen and (max-width: 1032px) {
             li {
               display: flex;
@@ -365,7 +370,6 @@ li {
             display: flex;
             justify-content: flex-start;
             align-items: center;
-
             height: 2rem;
 
             img {
@@ -373,13 +377,12 @@ li {
             }
             button {
               align-self: start;
-
               height: 1.2rem;
-
               margin: 0.8rem;
-
               border: none;
               font-size: 1.2rem;
+              position: relative;
+
               svg {
                 display: none;
               }
@@ -394,9 +397,50 @@ li {
                 transition: font-size 0.5s ease-out;
                 padding-right: 2rem;
               }
-              ul {
-                visibility: hidden;
+
+              /* ul {
+                visibility: hidden;   
+              } */
+
+              /* Start of code added by Sama */
+              div {
+                position: absolute;
+                top: 3rem;
+                display: flex;
+                width: max-content;
+                height: auto;
+                z-index: 10;
+                display: none;
+
+                ul {
+                  padding: 1.5rem 2.8rem 2rem 2.8rem;
+                  display: flex;
+                  gap: 0.5rem;
+                  flex-direction: column;
+                  justify-content: start;
+
+                  h3 {
+                    @include fonts("text-bold");
+                    color: $color-secondary;
+                    text-decoration: underline;
+                    text-underline-offset: 1rem;
+                    text-decoration-thickness: 0.2rem;
+                    margin-bottom: 1rem;
+                    font-size: 1.2rem;
+                    text-decoration-color: $border-light-grey;
+                  }
+
+                  li {
+                    color: $color-secondary;
+
+                    &:hover {
+                      color: $color-tertiary;
+                    }
+                  }
+                }
               }
+
+              /* End of code added by Sama */
 
               &:hover {
                 @include hover($color-tertiary, $color-primary);
@@ -409,15 +453,18 @@ li {
                   -webkit-transform: rotate(180deg);
                 }
 
-                ul {
+                div {
+                  display: flex;
+                  background-color: rgba(243, 243, 243, 0.95);
+                  border-radius: 0.4rem;
+                }
+
+              /*   ul {
                   margin-top: 0.8rem;
                   visibility: visible;
-
                   display: flex;
                   z-index: 9998;
-
                   justify-content: center;
-
                   background-color: rgba(255, 255, 255, 0.8);
                   border-radius: 0.4rem;
 
@@ -428,7 +475,6 @@ li {
                       display: block;
                       margin: auto;
                       li {
-                        margin: 0.5rem;
 
                         &:hover {
                           color: $color-tertiary;
@@ -436,7 +482,7 @@ li {
                       }
                     }
                   }
-                }
+                } */
               }
             }
           }
@@ -479,6 +525,7 @@ main {
       }
 
       img {
+
         position: absolute;
         width: 36rem;
         top: 15rem;

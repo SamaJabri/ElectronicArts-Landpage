@@ -347,10 +347,12 @@ li {
 }
 #header__main .content .main-nav__inner {
   background-color: #f3f3f3;
-  height: 3rem;
+  height: 4rem;
 }
 #header__main .content .main-nav__inner-items {
   display: flex;
+  align-items: center;
+  height: 75%;
   justify-content: flex-start;
 }
 @media only screen and (max-width: 1032px) {
@@ -388,8 +390,14 @@ li {
   margin: 0.8rem;
   border: none;
   font-size: 1.2rem;
+  position: relative;
   font-family: "ElectronicArtsTextLight", sans-serif;
   transition: color 0.5s ease-out;
+  /* ul {
+    visibility: hidden;   
+  } */
+  /* Start of code added by Sama */
+  /* End of code added by Sama */
 }
 #header__main .content .main-nav__inner-items li button svg {
   display: none;
@@ -401,13 +409,66 @@ li {
   transition: font-size 0.5s ease-out;
   padding-right: 2rem;
 }
-#header__main .content .main-nav__inner-items li button ul {
-  visibility: hidden;
+#header__main .content .main-nav__inner-items li button div {
+  position: absolute;
+  top: 3rem;
+  display: flex;
+  width: max-content;
+  height: auto;
+  z-index: 10;
+  display: none;
+}
+#header__main .content .main-nav__inner-items li button div ul {
+  padding: 1.5rem 2.8rem 2rem 2.8rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: start;
+}
+#header__main .content .main-nav__inner-items li button div ul h3 {
+  font-family: "ElectronicArtsTextBold", sans-serif;
+  color: #161616;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 0.2rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-decoration-color: #dfdfdf;
+}
+#header__main .content .main-nav__inner-items li button div ul li {
+  color: #161616;
+}
+#header__main .content .main-nav__inner-items li button div ul li:hover {
+  color: #FF4747;
 }
 #header__main .content .main-nav__inner-items li button:hover {
   cursor: pointer;
   color: #FF4747;
   background-color: #f3f3f3;
+  /*   ul {
+      margin-top: 0.8rem;
+      visibility: visible;
+      display: flex;
+      z-index: 9998;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 0.4rem;
+
+      li {
+        color: grey;
+
+        ul {
+          display: block;
+          margin: auto;
+          li {
+
+            &:hover {
+              color: $color-tertiary;
+            }
+          }
+        }
+      }
+    } */
 }
 #header__main .content .main-nav__inner-items li button:hover .fa-ellipsis-vertical {
   font-size: 1.5rem;
@@ -416,27 +477,10 @@ li {
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
 }
-#header__main .content .main-nav__inner-items li button:hover ul {
-  margin-top: 0.8rem;
-  visibility: visible;
+#header__main .content .main-nav__inner-items li button:hover div {
   display: flex;
-  z-index: 9998;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(243, 243, 243, 0.95);
   border-radius: 0.4rem;
-}
-#header__main .content .main-nav__inner-items li button:hover ul li {
-  color: grey;
-}
-#header__main .content .main-nav__inner-items li button:hover ul li ul {
-  display: block;
-  margin: auto;
-}
-#header__main .content .main-nav__inner-items li button:hover ul li ul li {
-  margin: 0.5rem;
-}
-#header__main .content .main-nav__inner-items li button:hover ul li ul li:hover {
-  color: #FF4747;
 }
 
 main .first-section {
