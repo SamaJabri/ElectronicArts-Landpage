@@ -14,3 +14,26 @@ function user() {
     y.style.display = "none";
   }
 }
+function more() {
+  var y = document.getElementById("more");
+  var n = document.querySelector("#black");
+  if (y.style.display === "none" && n.style.display === "none") {
+    y.style.display = "block";
+    n.style.display = "block";
+  } else {
+    y.style.display = "none";
+    n.style.display = "none";
+  }
+}
+function aside() {
+  var f = document.querySelector("#more");
+  var n = document.querySelector("#black");
+
+  if (f.style.display === "none" && n.style.display === "none") {
+    f.style.display = "block";
+    n.style.display = "block";
+  } else {
+    f.style.display = "none";
+    n.style.display = "none";
+  }
+}

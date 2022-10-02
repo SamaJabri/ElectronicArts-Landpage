@@ -17,6 +17,8 @@ li {
   list-style: none;
 }
 
+
+
 #question {
   display: none;
   position: absolute;
@@ -48,10 +50,16 @@ li {
       cursor: pointer;
     }
   }
+  @media screen and (max-width: 900px) {
+    
+    span{
+      font-size: 1rem;
+    }
+  }
   p {
     color: white;
     font-size: 1.5rem;
-    padding-left: 4rem;
+    padding-left: 4rem; 
     font-weight: 300;
   }
   .user-buttons {
@@ -59,13 +67,15 @@ li {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    gap: 2rem;
     height: 50%;
-    width: 80%;
-    margin-left: 6rem;
+    width: 100vw;
+    
+  
+
 
     @media screen and (max-width: 900px) {
-      margin: 0;
-      padding-right: 2rem;
+      
 
       p {
         font-size: 16px;
@@ -75,12 +85,12 @@ li {
     .user-buttons_top {
       display: flex;
       justify-content: space-around;
-      width: 75%;
-      padding-left: 3rem;
+      
+   
+      flex: 45%;
       @media screen and (max-width: 900px) {
         flex-direction: column;
-        width: 100%;
-        height: 25%;
+       
         padding-top: 12rem;
       }
 
@@ -92,8 +102,13 @@ li {
         @media screen and (max-width: 900px) {
           display: flex;
           svg {
-            width: 1rem;
-            height: 1rem;
+            width: 2rem;
+            height: 2rem;
+            @media screen and (max-width: 900px) {
+              width: 1.5rem;
+              height: 1.5rem;
+            
+            }
           }
           p {
             font-size: 0.4rem;
@@ -119,21 +134,35 @@ li {
     .user-buttons_bottom {
       display: flex;
       justify-content: space-around;
-      width: 75%;
-      padding-left: 2rem;
+      flex: 45%;
+      
 
       @media screen and (max-width: 900px) {
         flex-direction: column;
+        span{
+          font-size: 1rem;
+        }
       }
+      
+     
 
       button {
         background-color: $color-secondary;
-
+flex-direction: row;
         border: none;
+        @media screen and (max-width: 900px) {
+          
+        }
+      
 
         svg {
           width: 2rem;
           height: 2rem;
+          @media screen and (max-width: 900px) {
+            width: 1.5rem;
+            height: 1.5rem;
+          
+          }
           &:hover {
             transition: all 0.5s ease-in;
             width: 3rem;
@@ -183,7 +212,7 @@ li {
   width: 100vw;
   height: 50vh;
   background-color: $color-secondary;
-  z-index: 999;
+  z-index: 11;
   border-radius: 0.5rem;
 
   @media screen and (max-width: 1221px) {
@@ -191,19 +220,17 @@ li {
     width: 100%;
   }
 
-  @media screen and (max-width: 376px) {
-    width: 100%;
-  }
+
   .user-buttons {
     width: 2rem;
-    height: 12rem;
+    height: 20rem !important;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 0 14rem;
 
     @media screen and (max-width: 900px) {
-      align-items: flex-end;
+      height: 14rem !important;
       padding-left: 2rem;
       margin-bottom: 3rem;
     }
@@ -217,31 +244,20 @@ li {
       }
 
       svg {
-        width: 40%;
-        height: 40%;
+        width: 3rem;
+        height: 3rem;
         &:hover {
           transition: all 0.5s ease-in;
-          width: 50%;
-          height: 50%;
+          width: 4rem;
+          height: 4rem;
         }
 
-        @media screen and (max-width: 900px) {
-          width: 30%;
-          height: 30%;
-          &:hover {
-            transition: all 0.5s ease-in;
-            width: 40%;
-            height: 40%;
-          }
-        }
         @media screen and (max-width: 600px) {
-          width: 45%;
-          height: 45%;
-          &:hover {
-            transition: all 0.5s ease-in;
-            width: 55%;
-            height: 55%;
-          }
+        flex-direction: column;
+        justify-content: center;
+        align-items: inherit;
+        
+         
           p {
             font-size: 0.5rem;
           }
@@ -249,13 +265,15 @@ li {
       }
       p {
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
     }
 
     @media screen and (max-width: 571px) {
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: inherit;
+      gap: 1rem ;
     }
   }
 
@@ -301,6 +319,11 @@ li {
         gap: 0.9rem;
         margin-top: 0.7rem;
         margin-right: 0.5rem;
+        @media only screen and (max-width: 293px) {
+          width: 100vw;
+          height: 100%;
+
+        }
 
         li {
           margin-right: 1.8rem;
@@ -343,6 +366,11 @@ li {
           align-items: center;
           height: 75%;
           justify-content: flex-start;
+          @media only screen and (max-width: 293px) {
+            width: 100%;
+            height: 100%;
+
+          }
 
           @media only screen and (max-width: 1032px) {
             li {
@@ -365,6 +393,7 @@ li {
               }
             }
           }
+         
 
           li {
             display: flex;
@@ -382,6 +411,13 @@ li {
               border: none;
               font-size: 1.2rem;
               position: relative;
+              &:hover{
+                div{
+                  visibility: visible;
+                
+                }
+              }
+              
 
               svg {
                 display: none;
@@ -398,19 +434,18 @@ li {
                 padding-right: 2rem;
               }
 
-              /* ul {
-                visibility: hidden;   
-              } */
-
-              /* Start of code added by Sama */
+             
               div {
-                position: absolute;
-                top: 3rem;
+                position: fixed;
+                top: 5.6rem;
                 display: flex;
                 width: max-content;
                 height: auto;
                 z-index: 10;
-                display: none;
+                visibility: hidden;
+                
+
+               
 
                 ul {
                   padding: 1.5rem 2.8rem 2rem 2.8rem;
@@ -418,6 +453,7 @@ li {
                   gap: 0.5rem;
                   flex-direction: column;
                   justify-content: start;
+              
 
                   h3 {
                     @include fonts("text-bold");
@@ -434,6 +470,7 @@ li {
                     color: $color-secondary;
 
                     &:hover {
+                      
                       color: $color-tertiary;
                     }
                   }
@@ -505,6 +542,194 @@ main {
       background-image: url("../images/Header/Section-one-background.jpg");
       background-repeat: no-repeat;
       background-size: contain;
+      .black{
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(36, 34, 34, 0.7);
+      }
+     
+      .aside{
+        display: none;
+        width: 25rem;
+        height: 55rem;
+        background-color: $color-primary;
+        position:absolute;
+        
+        
+        z-index: 2;
+        overflow: scroll;
+
+        @media only screen and (max-width: 400spx) {
+          width: 100vw;
+          height: 100%;
+
+        }
+        &::-webkit-scrollbar{
+          display: none;
+        }
+        .allgames{
+          width: 100%;
+          height: 4rem;
+          display: flex ;
+          align-items: center;
+          justify-content: space-around;
+          padding-top: 3vw;
+          
+          padding-left: 3rem;
+          p{
+            flex: 50%;
+            font-size: 1.5rem;
+            color: $border-grey;
+            
+            &:hover{
+              color:$color-tertiary ;
+              transition: all 0.5s ease-in;
+              cursor: pointer;
+              
+            }
+          }
+          
+          i{
+            flex: 50%;
+            font-size: 1rem;
+            padding-left: 6vw;
+            &:hover{
+              color:$color-tertiary ;
+              transition: all 0.5s ease-in;
+              cursor: pointer;
+              
+            }
+          }
+        }
+      
+        .first-image{
+          background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2021/04/ea-play-16x9-png.adapt.crop1x1.767w.");
+          width: 80%;
+          height: 30%;
+          margin:3rem auto ;
+          background-size: cover;
+          position: relative;
+          .black{
+            display: none;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(36, 34, 34, 0.7);
+          }
+
+          &:hover{
+            cursor: pointer;
+
+            .black{
+              display: block;
+            }
+          }
+        
+          svg{
+            margin: auto;
+            position: absolute;
+            top: 45%;
+            left: 48%;
+            width: 50%;
+            height: 50%;
+            transform: translate(-50% , -50%);
+            transition: all 0.2s ease-in;
+            &:hover{
+              width: 70%;
+              height: 70%;
+            }
+      
+           
+          }
+        }
+
+        .second{
+          width: 25rem;
+          height: 30rem;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-self: center;
+        
+          
+         
+          .flex1 , .flex2 , .flex3 , .flex4 , .flex5 , .flex6 {
+            width: 9rem;
+            height: 9rem;
+            background-color: aquamarine;
+            overflow: hidden;
+            margin: 1rem;
+            filter: drop-shadow(8px 7px 23px rgb(131, 131, 131));
+            position: relative;
+
+            .black{
+              display: none;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(36, 34, 34, 0.7);
+            }
+
+            &:hover{
+              cursor: pointer;
+
+              .black{
+                display: block;
+              }
+            }
+            
+            img{
+              margin: auto;
+              position: absolute;
+              top: 45%;
+              left: 45%;
+              width: 50%;
+              height: 50%;
+              transform: translate(-50% , -50%);
+              transition: all 0.2s ease-in;
+              &:hover{
+                width: 70%;
+                height: 70%;
+              }
+        
+            }
+
+          }
+          .flex1{
+            background-image: url(../images/Header/new/7.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+ 
+          }
+          .flex2{
+            background-image: url(../images/Header/new/1.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+          .flex3{
+            background-image: url(../images/Header/new/3.jpg);
+            background-size: contain;
+               background-repeat: no-repeat;
+          }
+          .flex4{
+            background-image: url(../images/Header/new/4.jpg);
+            background-size: contain;
+               background-repeat: no-repeat;
+          }
+          .flex5{
+            background-image: url(../images/Header/new/5.jpg);
+            background-size: contain;
+             background-repeat: no-repeat;
+          }
+          .flex6{
+            background-image: url(../images/Header/new/6.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+    
+          }
+
+        }
+        
+      }
 
       @media only screen and (max-width: 765px) {
         justify-content: flex-end;
