@@ -2,6 +2,7 @@ $color-primary: #f3f3f3;
 $color-secondary: #161616;
 $color-tertiary: #FF4747;
 
+$border-light-grey: #eaeaea;
 $border-grey: #a3a3a3;
 $focus-grey: rgba(0, 0, 0, 0.08);
 $focus-black: rgba(22, 22, 22, 0.8);
@@ -72,5 +73,16 @@ $border-width: 1px;
         width: 12rem;
         height: 4.8rem;
         transition: all 0.1s ease-out;
+    }
+
+    @media (max-width: 630px) {
+        width: 80%;
+        margin-top: -0.5rem;
+        &:hover {
+            @include hover($color);
+            width: 82%;
+            height: 4.8rem;
+            transition: all 0.1s ease-out;
+        }
     }
 }

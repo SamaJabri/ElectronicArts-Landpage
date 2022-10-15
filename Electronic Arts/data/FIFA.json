@@ -1,0 +1,59 @@
+{
+    "data":
+    [
+        {
+            "id" : 1,
+            "image" : "images/Section Three/FIFA/FIFA 2.jpg",
+            "alt" : "FIFA",
+            "title" : "FIFA",
+            "date" : "Sep 26, 2022",
+            "header" : "FIFA 23 EA Play Early Access Trial - EA SPORTS Official Site",
+            "description" : "Get your season started early with the FIFA 23 EA Play Early Access Trial"
+        },
+        {
+            "id" : 2,
+            "image" : "images/Section Three/FIFA/FIFA 3.jpg",
+            "alt" : "FIFA",
+            "title" : "FIFA",
+            "date" : "Sep 26, 2022",
+            "header" : "FIFA 23 | Pitch Notes - FGS 23 Deep Dive - EA SPORTS",
+            "description" : "FIFA Global Series (FGS) this year will look similar to last season, but with a few key changes."
+        },
+        {
+            "id" : 3,
+            "image" : "images/Section Three/FIFA/FIFA 4.jpg",
+            "alt" : "FIFA",
+            "title" : "FIFA",
+            "date" : "Sep 23, 2022",
+            "header" : "Musqueam x FIFA 23 - Electronic Arts Official",
+            "description" : "Learn about Musqueam in FIFA 23"
+        },
+        {
+            "id" : 4,
+            "image" : "images/Section Three/FIFA/FIFA 5.jpg",
+            "alt" : "FIFA",
+            "title" : "FIFA",
+            "date" : "Sep 21, 2022",
+            "header" : "FIFA 23 | Pitch Notes - FUT Launch Update - EA SPORTS",
+            "description" : "With launch right around the corner, here's a sneak peek at what we as a team have planned for FIFA Ultimate Team™ (FUT) 23."
+        },
+        {
+            "id" : 5,
+            "image" : "images/Section Three/FIFA/FIFA 6.jpg",
+            "alt" : "FIFA",
+            "title" : "FIFA",
+            "date" : "Sep 21, 2022",
+            "header" : "FIFA 23 - Ted Lasso and AFC Richmond are in the game - Electronic Arts Offi…",
+            "description" : "Ted Lasso, Roy Kent, and AFC Richmond are in the game in EA SPORTS™ FIFA 23."
+        },
+        {
+            "id" : 6,
+            "image" : "images/Section Three/FIFA/FIFA 1.jpg",
+            "alt" : "FIFA",
+            "title" : "FIFA",
+            "date" : "Sep 13, 2022",
+            "header" : "FIFA 23 | Pitch Notes - PC FAQ - EA SPORTS",
+            "description" : "PC FIFA 23 players will be able to experience all new generation features and updates, including HyperMotion 2 Gameplay Technology, Advanced 11v11 Match Capture, Machine Learning, and more."
+        }
+    ]
+}
