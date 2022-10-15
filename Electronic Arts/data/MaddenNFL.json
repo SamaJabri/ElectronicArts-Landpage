@@ -1,0 +1,65 @@
+{
+    "data":
+    [
+        {
+            "id" : 1,
+            "link" : "https://www.ea.com/games/madden-nfl/madden-nfl-23/news/gridiron-notes-madden-23-october-13-title-update",
+            "image" : "images/Section Three/Madden NFL/MaddenNFL 6.jpg",
+            "alt" : "MaddenNFL",
+            "title" : "Madden",
+            "date" : "Oct 13, 2022",
+            "header" : "Madden NFL 23 - Title Update October 13th, 2022",
+            "description" : "Learn more about the updates coming to Madden NFL 23"
+        },
+        {
+            "id" : 2,
+            "link" : "https://www.ea.com/games/madden-nfl/madden-nfl-23/news/gridiron-notes-madden-23-september-8-title-update",
+            "image" : "images/Section Three/Madden NFL/MaddenNFL 1.jpg",
+            "alt" : "MaddenNFL",
+            "title" : "Madden",
+            "date" : "Sep 8, 2022",
+            "header" : "Madden NFL 23 - Title Update September 8, 2022",
+            "description" : "Learn more about the updates coming to Madden NFL 23"
+        },
+        {
+            "id" : 3,
+            "link" : "https://www.ea.com/games/madden-nfl/madden-nfl-23/compete/news/ultimate-kickoff-tournament-announcement",
+            "image" : "images/Section Three/Madden NFL/MaddenNFL 2.jpg",
+            "alt" : "MaddenNFL",
+            "title" : "MaddenNFL 23",
+            "date" : "Sep 2, 2022",
+            "header" : "Ultimate Kickoff Tournament Announcement",
+            "description" : "Watch the best Madden NFL 23 players compete for a share of the $180,000 prize pool! Plus, earn Ultimate Team rewards just for watching the tournament on Twitch."
+        },
+        {
+            "id" : 4,
+            "link" : "https://www.ea.com/games/madden-nfl/madden-nfl-23/news/madden-ultimate-team-23-pack-probability",
+            "image" : "images/Section Three/Madden NFL/MaddenNFL 3.jpg",
+            "alt" : "MaddenNFL",
+            "title" : "MaddenNFL 23",
+            "date" : "Aug 24, 2022",
+            "header" : "Madden NFL 23 - Madden Ultimate Team Pack Probability",
+            "description" : "Build your dream Madden Ultimate Team roster more efficiently with the Pack Probability update in Madden NFL 23."
+        },
+        {
+            "id" : 5,
+            "link" : "https://www.ea.com/games/madden-nfl/madden-nfl-23/news/madden-nfl-23-soundtrack",
+            "image" : "images/Section Three/Madden NFL/MaddenNFL 4.jpg",
+            "alt" : "MaddenNFL",
+            "title" : "MaddenNFL 23",
+            "date" : "Aug 16, 2022",
+            "header" : "Madden NFL 23 Soundtrack: Hit-Boy, Cordae, Pusha T, Kendrick Lamar",
+            "description" : "Listen to the Madden NFL 23 soundtrack, featuring Hit-Boy, Cordae, Pusha T, Kendrick Lamar and more!"
+        },
+        {
+            "id" : 6,
+            "link" : "https://www.ea.com/games/madden-nfl/madden-nfl-23/news/gridiron-notes-madden-nfl-23-madden-ultimate-team",
+            "image" : "images/Section Three/Madden NFL/MaddenNFL 5.jpg",
+            "alt" : "MaddenNFL",
+            "title" : "Madden",
+            "date" : "Aug 9, 2022",
+            "header" : "Madden NFL 23 - Madden Ultimate Team",
+            "description" : "Learn more about new features coming to Ultimate Team in Madden NFL 23"
+        }
+    ]
+}

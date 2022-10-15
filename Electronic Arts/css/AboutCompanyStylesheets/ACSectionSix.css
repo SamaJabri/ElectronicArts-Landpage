@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "ElectronicArtsTextRegular";
+  src: url("../fonts/ElectronicArtsText-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsTextBold";
+  src: url("../fonts/ElectronicArtsText-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsTextLight";
+  src: url("../fonts/ElectronicArtsText-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsDisplayBold";
+  src: url("../fonts/ElectronicArtsDisplay-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsDisplayRegular";
+  src: url("../fonts/ElectronicArtsDisplay-Regular.woff2") format("woff2");
+}
+.AC-section-six {
+  font-family: "ElectronicArtsTextRegular", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+.AC-section-six__header {
+  font-size: 2.5rem;
+  line-height: 3;
+  text-align: left;
+}
+.AC-section-six__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem 0.5rem;
+  margin: 1rem 6rem;
+}
+.AC-section-six__load-more {
+  border: 2px solid #eaeaea;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  width: 85%;
+  height: 10rem;
+  text-align: center;
+  margin: 2rem 6rem;
+}
+.AC-section-six__load-more:hover {
+  cursor: pointer;
+  border-color: #a3a3a3;
+}
+.AC-section-six__load-more:hover label {
+  transition: all 0.1s ease-out;
+  color: #161616;
+  margin-top: -0.1rem;
+}
+.AC-section-six__load-more:hover .AC-section-six__load-more__button {
+  transition: all 0.1s ease-out;
+  width: 4rem;
+  height: 4rem;
+  fill: #161616;
+}
+.AC-section-six__load-more__button {
+  width: 3.5rem;
+  height: 3.5rem;
+  fill: #a3a3a3;
+}
+.AC-section-six__load-more label {
+  font-family: "ElectronicArtsTextBold", sans-serif;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: #a3a3a3;
+}
+
+@media (max-width: 785px) {
+  .AC-section-six__cards {
+    gap: 0.2rem;
+    margin: 1rem 3rem;
+  }
+  .AC-section-six__load-more {
+    width: 90%;
+  }
+}
+@media (max-width: 630px) {
+  .AC-section-six__load-more {
+    margin-top: 1.5rem;
+  }
+}
+@media (max-width: 535px) {
+  .AC-section-six__load-more {
+    width: 85%;
+    padding: 0;
+  }
+}
+@media (max-width: 390px) {
+  .AC-section-six__load-more {
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=ACSectionSix.css.map */
