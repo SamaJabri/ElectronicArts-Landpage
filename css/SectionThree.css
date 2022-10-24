@@ -72,6 +72,21 @@
   padding: 0.5rem 1.4rem;
   font-size: 1.5rem;
   position: relative;
+  /*   &:focus {
+        cursor: pointer;
+        background-color: vars.$focus-grey;
+        color: vars.$focus-black;
+
+        &::after {
+             content: "";
+             background-color: vars.$color-tertiary;
+             height: 3px;
+             width: 80%;
+             position: absolute;
+             left: 10%;
+             bottom: 0;
+         }
+    } */
 }
 .section-three__list-div ul button:hover {
   cursor: pointer;
@@ -79,12 +94,12 @@
   background-color: rgba(0, 0, 0, 0.08);
   cursor: pointer;
 }
-.section-three__list-div ul button:focus {
+.section-three__list-div ul button.clicked {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.08);
   color: rgba(22, 22, 22, 0.8);
 }
-.section-three__list-div ul button:focus::after {
+.section-three__list-div ul button.clicked::after {
   content: "";
   background-color: #FF4747;
   height: 3px;
@@ -248,6 +263,12 @@
   }
 }
 @media (max-width: 800px) {
+  .section-three__list-div ul {
+    left: 0;
+  }
+  .section-three__list-div ul button {
+    font-size: 1.4rem;
+  }
   .section-three__cards {
     gap: 0rem;
     margin: 4rem 7%;

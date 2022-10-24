@@ -63,7 +63,22 @@
                     cursor: pointer;
                 }
 
-                &:focus {
+                &.clicked {
+                    cursor: pointer;
+                    background-color: vars.$focus-grey;
+                    color: vars.$focus-black;
+                    &::after {
+                        content: "";
+                        background-color: vars.$color-tertiary;
+                        height: 3px;
+                        width: 80%;
+                        position: absolute;
+                        left: 10%;
+                        bottom: 0;
+                    }
+                }
+
+              /*   &:focus {
                     cursor: pointer;
                     background-color: vars.$focus-grey;
                     color: vars.$focus-black;
@@ -77,10 +92,11 @@
                          left: 10%;
                          bottom: 0;
                      }
-                }
+                } */
             }
         }
     }
+    
 
     &__left-arrow,
     &__right-arrow {
@@ -241,6 +257,14 @@
 
 @media (max-width: 800px) {
     .section-three {
+        &__list-div {
+            ul {
+                left: 0;
+                button {
+                    font-size: 1.4rem;
+                }
+            }
+        }
         &__cards {
             gap: 0rem;
             margin: 4rem 7%;

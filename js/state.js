@@ -1,7 +1,7 @@
 const set = (key, item) => {
     try {
       const jsonItem = JSON.stringify(item);
-       localStorage.setItem(key, jsonItem)
+      localStorage.setItem(key, jsonItem)
     } catch (e) {
       console.log(e.message)
     }
@@ -14,19 +14,22 @@ const get = (key) => {
     }
 }
 
-// shape your data model
 const INIT_MODEL = {
-    isModalSettingsOpen: false,
     darkMode: false,
     items: [],
 };
   
-// set initial model
+// Set initial model
 set("model", INIT_MODEL);
   
 // write one generic function
-const toggle = (oldModel, prop) => ({ ...oldModel, [prop]: !oldModel[prop] });
-// and then use:
-// const oldModel = get("model");
-// toggle(oldModel, "isModalSettingsOpen");
-// toggle(oldModel, "darkMode");
+//const toggle = (oldModel, prop) => ({ ...oldModel, [prop]: !oldModel[prop] });
+
+const changeDisplayedModel = (jsonFile) => {
+  const model = get("model");
+
+  model.items = jsonFile.data;
+  set('model', model);
+}
+
+export { set, get, changeDisplayedModel };

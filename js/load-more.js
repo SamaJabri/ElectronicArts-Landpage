@@ -1,9 +1,12 @@
 import EANews from './../data/LatestEANews.json' assert {type: 'json'};
+import { get, changeDisplayedModel } from './state.js';
 
 const itemsDOM = document.querySelector('#AC-section-six__cards');
 
+changeDisplayedModel(EANews);
+
 const renderItems = (items, no) =>
-  items.data
+  items
     .filter((_, i) => i + 1 <= no)
     .map(item);
 
@@ -33,7 +36,7 @@ const item = ({ id, link, image, alt, title, date, header, description }) =>
 let intial = 0;
 const loadMoreButton = document.querySelector("#AC-section-six__load-more");
 
-const renderItem = (num) => itemsDOM.innerHTML = renderItems(EANews, num);
+const renderItem = (num) => itemsDOM.innerHTML = renderItems(get("model").items, num);
 loadMoreButton.addEventListener('click', () => renderItem(intial += 3));
 
 window.onload(loadMoreButton.click());
