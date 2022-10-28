@@ -24,6 +24,12 @@ set("model", INIT_MODEL);
   
 // write one generic function
 //const toggle = (oldModel, prop) => ({ ...oldModel, [prop]: !oldModel[prop] });
+/* 
+window.onclick = function (event) {
+  if(event.target === deleteScreen) {
+      deleteScreen.style.display = 'none';
+  }
+} */
 
 const changeDisplayedModel = (jsonFile) => {
   const model = get("model");

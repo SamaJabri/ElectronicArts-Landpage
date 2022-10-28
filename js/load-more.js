@@ -1,42 +1,22 @@
 import EANews from './../data/LatestEANews.json' assert {type: 'json'};
 import { get, changeDisplayedModel } from './state.js';
-
-const itemsDOM = document.querySelector('#AC-section-six__cards');
+import * as functions from './functions.js';
+import * as vars from './DOM-elements.js';
 
 changeDisplayedModel(EANews);
 
-const renderItems = (items, no) =>
+// Function to render only 3 items each time
+const renderItems = (items, num) =>
   items
-    .filter((_, i) => i + 1 <= no)
+    .filter((_, i) => i + 1 <= num)
     .map(item);
 
-/* Generate the divs in About Company sixth section on button click */
-const item = ({ id, link, image, alt, title, date, header, description }) => 
-    `<div class="section-three__card">
-        <div class="section-three__card-image">
-            <img src="${image}" alt="${alt}" />
-        </div>
-
-        <a href="${link}" class="section-three__card-link" ></a>
-
-        <div class="section-three__card-description">
-            <div class="section-three__card-header">
-                <p>
-                    ${title}
-                    <span>${date}</span>
-                </p>
-            </div>
-            <div class="section-three__card-body">
-                <h2>${header}</h2>
-                <p>${description}</p>
-            </div>
-        </div>
-    </div>`
+// Generate the divs in About Company sixth section on button click 
+const item = (data) => functions.renderCard(data);
 
 let intial = 0;
-const loadMoreButton = document.querySelector("#AC-section-six__load-more");
 
-const renderItem = (num) => itemsDOM.innerHTML = renderItems(get("model").items, num);
-loadMoreButton.addEventListener('click', () => renderItem(intial += 3));
+const renderItem = (num) => 
+    vars.sectionSixItemsDOM.innerHTML = renderItems(get("model").items, num);
 
-window.onload(loadMoreButton.click());
+functions.addClickELToButton(vars.loadMoreButton, () => renderItem(intial += 3));

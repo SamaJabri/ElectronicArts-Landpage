@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="dark light">
 
         <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
 
@@ -16,8 +17,14 @@
 
         <title>Electronic Arts Home Page - Official EA Site</title>
 
-        <script type="module" src="./js/state.js" defer ></script>
-        <script type="module" src="./js/generate-div.js" defer ></script>
+        <link rel="stylesheet" 
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
+              integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" 
+              crossorigin="anonymous" 
+              referrerpolicy="no-referrer"
+        >
+
+        <script type="module" src="./js/main-index.js" defer></script>
         <link rel="stylesheet" href="css/style.css" />
     </head>
 
@@ -29,20 +36,32 @@
        </header> 
 
        <main>
-            <!-- Section One - Andrei Barbulesco -->
+            <!-- Section One - Muhammed Altunisik -->
             <section>
 
             </section>
 
-            <!-- Section Two - Andrei Barbulesco -->
+            <!-- Section Two - Sama Jabri -->
             <section>
                 <div class="section-two">
-                    
+                  <!--   <div class="section-Two__cards">
+                        <div class="section-two__card">
+                            <img src="images/Section Two/Fifa-23.jpg" alt="FIFA" />
+                            <div class="section-two__card-body">
+                                <img src="images/Section Two/Fifa-23-Logo.svg" alt="logo" />
+                                <p>Official Site</p>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
             </section>
 
             <!-- Section Three - Sama Jabri -->
             <section>
+                <div class="dark-mode-button">
+                    <button id="dark-mode-button"><i class="fa-solid fa-moon"></i></button>
+                </div>
+                
                 <div  class="section-three">
                     <h2 class="section-three__header">Latest Updates</h2>
                     <button class='section-three__left-arrow' id='section-three__left-arrow' type="button" >
@@ -93,7 +112,6 @@
                                 <button id="Inside-EA">Inside EA</button>
                             </li>
                         </ul>
-                       
                     </div>
 
                     <div class="section-three__cards" id="section-three-cards">
@@ -101,7 +119,9 @@
                     </div>
 
                     <div class="section-three__button">
-                        <button>Read More</button>
+                        <a href="https://www.ea.com/news" target="_blank">
+                            <button>Read More</button>
+                        </a>
                     </div>
 
                 </div>

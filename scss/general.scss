@@ -2,6 +2,7 @@ $color-primary: #f3f3f3;
 $color-secondary: #161616;
 $color-tertiary: #FF4747;
 
+$color-black-dark: #221f1f;
 $border-light-grey: #eaeaea;
 $border-grey: #a3a3a3;
 $focus-grey: rgba(0, 0, 0, 0.08);
@@ -78,11 +79,61 @@ $border-width: 1px;
     @media (max-width: 630px) {
         width: 80%;
         margin-top: -0.5rem;
+        
         &:hover {
             @include hover($color);
             width: 82%;
             height: 4.8rem;
             transition: all 0.1s ease-out;
+        }
+    }
+}
+
+* {
+    color-scheme: light dark;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Dark mode
+.dark-mode-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: 5;
+
+    button {
+        outline: none;
+        font-weight: 600;
+        border-radius: 2rem;
+        border: none;
+        background-color: $color-secondary;
+        color: white;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+            cursor: pointer;
+            filter: brightness(130%);
+        }
+
+        i {
+            font-size: 2rem;
+        }
+    }
+}
+
+.dark {
+    .dark-mode-button {
+        button {
+            color: $color-secondary;
+            background-color: white;
         }
     }
 }

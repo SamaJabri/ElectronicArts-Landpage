@@ -18,6 +18,47 @@
   font-family: "ElectronicArtsDisplayRegular";
   src: url("../fonts/ElectronicArtsDisplay-Regular.woff2") format("woff2");
 }
+* {
+  color-scheme: light dark;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dark-mode-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 4rem;
+  height: 4rem;
+  z-index: 5;
+}
+.dark-mode-button button {
+  outline: none;
+  font-weight: 600;
+  border-radius: 2rem;
+  border: none;
+  background-color: #161616;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+.dark-mode-button button:hover {
+  cursor: pointer;
+  filter: brightness(130%);
+}
+.dark-mode-button button i {
+  font-size: 2rem;
+}
+
+.dark .dark-mode-button button {
+  color: #161616;
+  background-color: white;
+}
+
 .section-three {
   font-family: "ElectronicArtsTextRegular", sans-serif;
   background-color: #f3f3f3;
@@ -184,6 +225,7 @@
   font-family: "ElectronicArtsTextBold", sans-serif;
   line-height: 1.4;
   font-size: 1.3rem;
+  color: #161616;
 }
 .section-three__card-body p {
   font-family: "ElectronicArtsTextRegular", sans-serif;
@@ -198,7 +240,14 @@
   height: 8rem;
   width: 100%;
 }
-.section-three__button button {
+.section-three__button a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.section-three__button a button {
   background: none;
   color: #161616;
   border: 2px solid #161616;
@@ -207,7 +256,7 @@
   height: 4.3rem;
   font-size: 1.3rem;
 }
-.section-three__button button:hover {
+.section-three__button a button:hover {
   cursor: pointer;
   color: #161616;
   background-color: none;
@@ -216,11 +265,11 @@
   transition: all 0.1s ease-out;
 }
 @media (max-width: 630px) {
-  .section-three__button button {
+  .section-three__button a button {
     width: 80%;
     margin-top: -0.5rem;
   }
-  .section-three__button button:hover {
+  .section-three__button a button:hover {
     cursor: pointer;
     color: #161616;
     background-color: none;
@@ -296,6 +345,79 @@
   }
   .section-three__card-body p {
     display: none;
+  }
+}
+.dark .section-three {
+  background-color: #161616;
+  color: white;
+}
+.dark .section-three__list-div {
+  border-bottom-color: #a3a3a3;
+}
+.dark .section-three__list-div ul li {
+  border-right-color: #a3a3a3;
+}
+.dark .section-three__list-div ul button {
+  color: white;
+}
+.dark .section-three__list-div ul button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(163, 163, 163, 0.2862745098);
+}
+.dark .section-three__list-div ul button.clicked {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(163, 163, 163, 0.2862745098);
+}
+.dark .section-three__left-arrow, .dark .section-three__right-arrow {
+  background: #161616;
+}
+.dark .section-three__card {
+  background-color: #221f1f;
+  box-shadow: 0 3px 10px -2px rgba(255, 255, 255, 0.1);
+}
+.dark .section-three__card:hover {
+  box-shadow: 6px 36px 19px -2px rgba(255, 255, 255, 0.1);
+}
+.dark .section-three__card-header span {
+  color: white;
+}
+.dark .section-three__card-body {
+  color: white;
+}
+.dark .section-three__card-body p {
+  color: #eaeaea;
+}
+.dark .section-three__button button {
+  background: none;
+  color: white;
+  border: 2px solid white;
+  border-radius: 0.3rem;
+  width: 11.5rem;
+  height: 4.3rem;
+  font-size: 1.3rem;
+}
+.dark .section-three__button button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: none;
+  width: 12rem;
+  height: 4.8rem;
+  transition: all 0.1s ease-out;
+}
+@media (max-width: 630px) {
+  .dark .section-three__button button {
+    width: 80%;
+    margin-top: -0.5rem;
+  }
+  .dark .section-three__button button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: none;
+    width: 82%;
+    height: 4.8rem;
+    transition: all 0.1s ease-out;
   }
 }
 

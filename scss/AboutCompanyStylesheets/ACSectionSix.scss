@@ -7,6 +7,8 @@
     justify-content: center;
     align-items: center;
     padding: 3rem 0;
+    background-color: vars.$color-primary;
+    color: vars.$color-secondary;
 
     &__header {
         font-size: 2.5rem;
@@ -103,6 +105,27 @@
     .AC-section-six  {
         &__load-more  {
             width: 80%;
+        }
+    }
+}
+
+.dark {
+    .AC-section-six  {
+        background-color: vars.$color-secondary;
+        color: white;
+
+        &__load-more {
+            border: 2px solid #eaeaea;
+    
+            &:hover {    
+                label {
+                    color: white;
+                }
+                
+                .AC-section-six__load-more__button {
+                    fill: white;
+                }
+            }
         }
     }
 }
