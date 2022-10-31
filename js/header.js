@@ -301,16 +301,19 @@ asideBtns.forEach((asideBtn) => {
     }
   });
 });
+const black = document.querySelector("#black");
 
 const btnIn = document.querySelector("#btn-in");
 const more = document.querySelector("#more");
-const closeMore = document.querySelector("#close-more");
+const closeMore = document.querySelector("#close");
 
 btnIn.addEventListener("click", () => {
   more.style.display = "block";
+  black.style.display = "block";
 });
 closeMore.addEventListener("click", () => {
   more.style.display = "none";
+  black.style.display = "none";
 });
 const closeBtn = document.querySelector("#closeAsideModal");
 const sideMOdal = document.querySelector("#vertical-line");
@@ -318,8 +321,10 @@ const opnBtn = document.querySelector("#btn-btn");
 
 opnBtn.addEventListener("click", () => {
   sideMOdal.style.display = "block";
+  black.style.display = "block";
 });
 
 closeBtn.addEventListener("click", () => {
   sideMOdal.style.display = "none";
+  black.style.display = "none";
 });

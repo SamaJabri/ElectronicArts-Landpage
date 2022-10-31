@@ -341,6 +341,189 @@ body {
   height: 6rem;
 }
 
+.black {
+  display: none;
+  position: absolute;
+  top: -4.2rem;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(36, 34, 34, 0.7);
+  z-index: 1;
+}
+
+.aside {
+  display: none;
+  width: 25rem;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 3.5%;
+  z-index: 2;
+  overflow: scroll;
+}
+@media only screen and (max-width: 670px) {
+  .aside {
+    width: 100%;
+    height: 100vh;
+  }
+}
+.aside::-webkit-scrollbar {
+  display: none;
+}
+.aside .allgames {
+  width: 90%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+}
+.aside .allgames p {
+  flex: 50%;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #a3a3a3;
+}
+.aside .allgames p:hover {
+  color: #FF4747;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+.aside .allgames i {
+  font-size: 1rem;
+  padding-left: 6vw;
+}
+.aside .allgames i:hover {
+  color: #FF4747;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+.aside .first-image {
+  background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2021/04/ea-play-16x9-png.adapt.crop1x1.767w.");
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32%;
+  margin: 3rem auto 1rem auto;
+  background-size: cover;
+  position: relative;
+}
+.aside .first-image:hover {
+  cursor: pointer;
+}
+.aside .first-image:hover svg {
+  width: 36%;
+  height: 36%;
+}
+.aside .first-image svg {
+  width: 30%;
+  height: 30%;
+  transition: all 0.2s ease-in;
+}
+.aside .second {
+  width: 100%;
+  height: 32rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+.aside .second .flex1,
+.aside .second .flex2,
+.aside .second .flex3,
+.aside .second .flex4,
+.aside .second .flex5,
+.aside .second .flex6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9rem;
+  height: 9rem;
+  overflow: hidden;
+  margin: 1rem;
+}
+@media (max-width: 670px) {
+  .aside .second .flex1,
+.aside .second .flex2,
+.aside .second .flex3,
+.aside .second .flex4,
+.aside .second .flex5,
+.aside .second .flex6 {
+    width: 40%;
+    height: 40%;
+  }
+}
+@media (max-width: 270px) {
+  .aside .second .flex1,
+.aside .second .flex2,
+.aside .second .flex3,
+.aside .second .flex4,
+.aside .second .flex5,
+.aside .second .flex6 {
+    width: 100%;
+    height: 40%;
+  }
+}
+.aside .second .flex1:hover,
+.aside .second .flex2:hover,
+.aside .second .flex3:hover,
+.aside .second .flex4:hover,
+.aside .second .flex5:hover,
+.aside .second .flex6:hover {
+  cursor: pointer;
+}
+.aside .second .flex1:hover img,
+.aside .second .flex2:hover img,
+.aside .second .flex3:hover img,
+.aside .second .flex4:hover img,
+.aside .second .flex5:hover img,
+.aside .second .flex6:hover img {
+  width: 55%;
+  height: 55%;
+}
+.aside .second .flex1 img,
+.aside .second .flex2 img,
+.aside .second .flex3 img,
+.aside .second .flex4 img,
+.aside .second .flex5 img,
+.aside .second .flex6 img {
+  width: 50%;
+  height: 50%;
+  transition: all 0.2s ease-in;
+}
+.aside .second .flex1 {
+  background-image: url(../images/Header/new/7.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.aside .second .flex2 {
+  background-image: url(../images/Header/new/1.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.aside .second .flex3 {
+  background-image: url(../images/Header/new/3.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.aside .second .flex4 {
+  background-image: url(../images/Header/new/4.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.aside .second .flex5 {
+  background-image: url(../images/Header/new/5.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.aside .second .flex6 {
+  background-image: url(../images/Header/new/6.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
 #header__main {
   position: relative;
 }
@@ -533,186 +716,6 @@ main .first-section .image-box {
   background-image: url("../images/Header/Section-one-background.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-}
-main .first-section .image-box .black {
-  display: none;
-  position: absolute;
-  top: -4.2rem;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(36, 34, 34, 0.7);
-}
-main .first-section .image-box .aside {
-  display: none;
-  width: 25rem;
-  height: 100%;
-  background-color: white;
-  position: absolute;
-  top: -4rem;
-  z-index: 2;
-  overflow: scroll;
-}
-@media only screen and (max-width: 670px) {
-  main .first-section .image-box .aside {
-    width: 100%;
-    height: 100vh;
-  }
-}
-main .first-section .image-box .aside::-webkit-scrollbar {
-  display: none;
-}
-main .first-section .image-box .aside .allgames {
-  width: 90%;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  padding-left: 3rem;
-}
-main .first-section .image-box .aside .allgames p {
-  flex: 50%;
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: #a3a3a3;
-}
-main .first-section .image-box .aside .allgames p:hover {
-  color: #FF4747;
-  transition: all 0.5s ease-in;
-  cursor: pointer;
-}
-main .first-section .image-box .aside .allgames i {
-  font-size: 1rem;
-  padding-left: 6vw;
-}
-main .first-section .image-box .aside .allgames i:hover {
-  color: #FF4747;
-  transition: all 0.5s ease-in;
-  cursor: pointer;
-}
-main .first-section .image-box .aside .first-image {
-  background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2021/04/ea-play-16x9-png.adapt.crop1x1.767w.");
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 32%;
-  margin: 3rem auto 1rem auto;
-  background-size: cover;
-  position: relative;
-}
-main .first-section .image-box .aside .first-image:hover {
-  cursor: pointer;
-}
-main .first-section .image-box .aside .first-image:hover svg {
-  width: 36%;
-  height: 36%;
-}
-main .first-section .image-box .aside .first-image svg {
-  width: 30%;
-  height: 30%;
-  transition: all 0.2s ease-in;
-}
-main .first-section .image-box .aside .second {
-  width: 100%;
-  height: 32rem;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 1rem;
-  justify-content: center;
-  align-self: center;
-  align-items: center;
-}
-main .first-section .image-box .aside .second .flex1,
-main .first-section .image-box .aside .second .flex2,
-main .first-section .image-box .aside .second .flex3,
-main .first-section .image-box .aside .second .flex4,
-main .first-section .image-box .aside .second .flex5,
-main .first-section .image-box .aside .second .flex6 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 9rem;
-  height: 9rem;
-  overflow: hidden;
-  margin: 1rem;
-}
-@media (max-width: 670px) {
-  main .first-section .image-box .aside .second .flex1,
-main .first-section .image-box .aside .second .flex2,
-main .first-section .image-box .aside .second .flex3,
-main .first-section .image-box .aside .second .flex4,
-main .first-section .image-box .aside .second .flex5,
-main .first-section .image-box .aside .second .flex6 {
-    width: 40%;
-    height: 40%;
-  }
-}
-@media (max-width: 270px) {
-  main .first-section .image-box .aside .second .flex1,
-main .first-section .image-box .aside .second .flex2,
-main .first-section .image-box .aside .second .flex3,
-main .first-section .image-box .aside .second .flex4,
-main .first-section .image-box .aside .second .flex5,
-main .first-section .image-box .aside .second .flex6 {
-    width: 100%;
-    height: 40%;
-  }
-}
-main .first-section .image-box .aside .second .flex1:hover,
-main .first-section .image-box .aside .second .flex2:hover,
-main .first-section .image-box .aside .second .flex3:hover,
-main .first-section .image-box .aside .second .flex4:hover,
-main .first-section .image-box .aside .second .flex5:hover,
-main .first-section .image-box .aside .second .flex6:hover {
-  cursor: pointer;
-}
-main .first-section .image-box .aside .second .flex1:hover img,
-main .first-section .image-box .aside .second .flex2:hover img,
-main .first-section .image-box .aside .second .flex3:hover img,
-main .first-section .image-box .aside .second .flex4:hover img,
-main .first-section .image-box .aside .second .flex5:hover img,
-main .first-section .image-box .aside .second .flex6:hover img {
-  width: 55%;
-  height: 55%;
-}
-main .first-section .image-box .aside .second .flex1 img,
-main .first-section .image-box .aside .second .flex2 img,
-main .first-section .image-box .aside .second .flex3 img,
-main .first-section .image-box .aside .second .flex4 img,
-main .first-section .image-box .aside .second .flex5 img,
-main .first-section .image-box .aside .second .flex6 img {
-  width: 50%;
-  height: 50%;
-  transition: all 0.2s ease-in;
-}
-main .first-section .image-box .aside .second .flex1 {
-  background-image: url(../images/Header/new/7.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-main .first-section .image-box .aside .second .flex2 {
-  background-image: url(../images/Header/new/1.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-main .first-section .image-box .aside .second .flex3 {
-  background-image: url(../images/Header/new/3.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-main .first-section .image-box .aside .second .flex4 {
-  background-image: url(../images/Header/new/4.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-main .first-section .image-box .aside .second .flex5 {
-  background-image: url(../images/Header/new/5.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-main .first-section .image-box .aside .second .flex6 {
-  background-image: url(../images/Header/new/6.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 @media only screen and (max-width: 765px) {
   main .first-section .image-box {
