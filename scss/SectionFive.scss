@@ -1,0 +1,30 @@
+@use 'general.scss' as vars;
+
+.dark{
+
+  .ongoingValues{
+    color:white;
+    background-color: vars.$color-secondary;
+  }
+
+  .card{
+    background-color: vars.$color-secondary;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  }
+
+  .card-title{
+    color:white;
+    background-color: vars.$color-secondary;
+  }
+
+  .card-content{
+    color:white;
+    background-color: vars.$color-secondary;
+  }
+
+  .containerCards{
+    color:white;
+    background-color: vars.$color-secondary;
+  }
+
+}

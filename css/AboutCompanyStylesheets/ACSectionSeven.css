@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "ElectronicArtsTextRegular";
+  src: url("../fonts/ElectronicArtsText-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsTextBold";
+  src: url("../fonts/ElectronicArtsText-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsTextLight";
+  src: url("../fonts/ElectronicArtsText-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsDisplayBold";
+  src: url("../fonts/ElectronicArtsDisplay-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsDisplayRegular";
+  src: url("../fonts/ElectronicArtsDisplay-Regular.woff2") format("woff2");
+}
+.sectionSeven {
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 200px;
+  padding-right: 200px;
+  height: 500px;
+}
+
+.divSeven {
+  font-size: 36px;
+  font-family: "ElectronicArtsDisplayBold";
+}
+
+.sSectionSeven {
+  display: table-cell;
+  border-bottom: 1px solid;
+  border-color: rgb(239, 239, 239);
+}
+
+.doSectionSeven {
+  width: 220px;
+  display: table-cell;
+  font-family: "ElectronicArtsTextBold";
+  padding: 4px 24px 4px 0px;
+  font-size: 16px;
+  color: #161616;
+}
+
+.dtSectionSeven {
+  display: table-cell;
+  color: #161616;
+  font-family: "ElectronicArtsTextRegular";
+  font-size: 16px;
+  padding: 4px 24px 4px 0px;
+}
+
+@media (max-width: 1300px) and (min-width: 900px) {
+  .sectionSeven {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 90px;
+    padding-right: 90px;
+    height: 500px;
+  }
+  .sSectionSeven {
+    display: table-cell;
+    border-bottom: 1px solid;
+    border-color: rgb(239, 239, 239);
+  }
+  .doSectionSeven {
+    font-family: "ElectronicArtsTextBold";
+    font-size: 16px;
+    color: #161616;
+  }
+  .dtSectionSeven {
+    color: #161616;
+    font-family: "ElectronicArtsTextRegular";
+    font-size: 16px;
+  }
+}
+@media (max-width: 900px) {
+  .sectionSeven {
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 500px;
+  }
+  .sSectionSeven {
+    display: table-cell;
+    border-bottom: 1px solid;
+    border-color: rgb(239, 239, 239);
+  }
+  .doSectionSeven {
+    font-family: "ElectronicArtsTextBold";
+    font-size: 14px;
+    color: #161616;
+  }
+  .dtSectionSeven {
+    color: #161616;
+    font-family: "ElectronicArtsTextRegular";
+    font-size: 14px;
+  }
+}
+@media (max-width: 690px) {
+  .sectionSeven {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 500px;
+  }
+  .sSectionSeven {
+    display: contents;
+    border: none;
+  }
+  .doSectionSeven {
+    font-family: "ElectronicArtsTextBold";
+    font-size: 14px;
+    color: #161616;
+  }
+  .dtSectionSeven {
+    color: #161616;
+    font-family: "ElectronicArtsTextRegular";
+    font-size: 14px;
+  }
+}
+.dark .sectionSeven {
+  background-color: #161616;
+}
+.dark .divSeven {
+  background-color: #161616;
+  color: white;
+}
+.dark .sSectionSeven {
+  background-color: #161616;
+  color: white;
+}
+.dark .doSectionSeven {
+  background-color: #161616;
+  color: white;
+}
+.dark .dtSectionSeven {
+  background-color: #161616;
+  color: white;
+}
+
+/*# sourceMappingURL=ACSectionSeven.css.map */

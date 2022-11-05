@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "ElectronicArtsTextRegular";
+  src: url("../fonts/ElectronicArtsText-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsTextBold";
+  src: url("../fonts/ElectronicArtsText-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsTextLight";
+  src: url("../fonts/ElectronicArtsText-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsDisplayBold";
+  src: url("../fonts/ElectronicArtsDisplay-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsDisplayRegular";
+  src: url("../fonts/ElectronicArtsDisplay-Regular.woff2") format("woff2");
+}
+.ongoingValues {
+  margin-bottom: 40px;
+}
+
+.bodySection-cards {
+  color: black;
+  margin: 50px 0;
+}
+
+.containerCards {
+  font-family: "ElectronicArtsDisplayBold";
+  font-size: 32px;
+  text-align: center;
+  padding: 0 15px;
+  margin-bottom: 1em;
+}
+
+.cards {
+  display: flex;
+  padding: 25px 0px;
+  list-style: none;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  scroll-snap-align: start;
+  height: 235px;
+}
+
+.card:first-child {
+  margin-left: 20px;
+}
+
+.card:not(:last-child) {
+  margin-right: 10px;
+}
+
+.card .card-title {
+  font-family: "ElectronicArtsTextBold";
+  font-size: 20px;
+  text-align: left;
+}
+
+.card .card-content {
+  font-family: "ElectronicArtsTextRegular";
+  font-size: 16px;
+  margin: 20px 0;
+  max-width: 85%;
+  text-align: left;
+}
+
+.card .card-link-wrapper {
+  margin-top: auto;
+}
+
+.card .card-link {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 6px 12px;
+}
+
+@media (min-width: 500px) {
+  .card {
+    flex-basis: calc(50% - 10px);
+  }
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+@media (min-width: 700px) {
+  .card {
+    flex-basis: calc(33.3333333333% - 20px);
+  }
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+@media (min-width: 1100px) {
+  .card {
+    flex-basis: calc(25% - 30px);
+  }
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+.dark .bodySection-cards {
+  background-color: #161616;
+}
+.dark .ongoingValues {
+  color: white;
+  background-color: #161616;
+}
+.dark .card {
+  background-color: #161616;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+.dark .card-title {
+  color: white;
+  background-color: #161616;
+}
+.dark .card-content {
+  color: white;
+  background-color: #161616;
+}
+.dark .containerCards {
+  color: white;
+  background-color: #161616;
+}
+
+/*# sourceMappingURL=ACSectionFive.css.map */

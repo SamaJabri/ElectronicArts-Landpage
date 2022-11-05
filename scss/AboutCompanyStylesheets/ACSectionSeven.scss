@@ -1,0 +1,177 @@
+@use '../general.scss' as vars;
+
+.sectionSeven {
+    display: flex;
+    gap: 0.8rem;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 500px;
+}
+
+.divSeven {
+    font-size: 36px;
+    font-family: "ElectronicArtsDisplayBold";
+}
+
+
+
+.sSectionSeven {
+    display: table-cell;
+    border-bottom: 1px solid;
+    border-color: rgb(239, 239, 239);
+}
+
+.doSectionSeven {
+    width: 220px;
+    display: table-cell;
+    font-family: "ElectronicArtsTextBold";
+    padding: 4px 24px 4px 0px;
+    font-size: 16px;
+    color: #161616;
+}
+
+.dtSectionSeven {
+    display: table-cell;
+    color: #161616;
+    font-family: "ElectronicArtsTextRegular";
+    font-size: 16px;
+    padding: 4px 24px 4px 0px;
+}
+
+@media (max-width: 1300px) and (min-width:900px) {
+    .sectionSeven {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 90px;
+        padding-right: 90px;
+        height: 500px;
+    }
+
+    .sSectionSeven {
+        display: table-cell;
+        border-bottom: 1px solid;
+        border-color: rgb(239, 239, 239);
+    }
+
+    .doSectionSeven {
+
+        font-family: "ElectronicArtsTextBold";
+
+        font-size: 16px;
+        color: #161616;
+    }
+
+    .dtSectionSeven {
+
+        color: #161616;
+
+        font-family: "ElectronicArtsTextRegular";
+        font-size: 16px;
+
+
+    }
+}
+
+@media (max-width: 900px) {
+
+    .sectionSeven {
+        gap: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+        height: 500px;
+    }
+
+    .sSectionSeven {
+        display: table-cell;
+        border-bottom: 1px solid;
+        border-color: rgb(239, 239, 239);
+    }
+
+    .doSectionSeven {
+
+        font-family: "ElectronicArtsTextBold";
+
+        font-size: 14px;
+        color: #161616;
+    }
+
+    .dtSectionSeven {
+
+        color: #161616;
+
+        font-family: "ElectronicArtsTextRegular";
+        font-size: 14px;
+
+
+    }
+
+
+}
+
+@media (max-width: 690px) {
+
+    .sectionSeven {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+        height: 500px;
+    }
+
+    .sSectionSeven {
+        display: contents;
+        border: none;
+    }
+
+    .doSectionSeven {
+
+        font-family: "ElectronicArtsTextBold";
+
+        font-size: 14px;
+        color: #161616;
+    }
+
+    .dtSectionSeven {
+
+        color: #161616;
+
+        font-family: "ElectronicArtsTextRegular";
+        font-size: 14px;
+
+    }
+}
+
+.dark {
+
+    .sectionSeven {
+        background-color: vars.$color-secondary;
+    }
+
+    .divSeven {
+        background-color: vars.$color-secondary;
+        color: white;
+    }
+
+    .sSectionSeven {
+        background-color: vars.$color-secondary;
+        color: white;
+    }
+
+    .doSectionSeven {
+        background-color: vars.$color-secondary;
+        color: white;
+    }
+
+    .dtSectionSeven {
+        background-color: vars.$color-secondary;
+        color: white;
+    }
+
+}
