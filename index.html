@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+
+    <meta name="author" content="Electronic Arts" />
+    <meta name="title" content="Electronic Arts Home Page - Official EA Site" />
+    <meta
+      name="description"
+      content="We exist to inspire the world through Play. 
+        Electronic Arts is a leading publisher of games on Console, PC and Mobile."
+    />
+    <meta name="url" content="https://www.ea.com/" />
+
+    <title>Electronic Arts Home Page - Official EA Site</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+
+    <!-- Models -->
+    <div id="vertical-line" class="vertical-line"></div>
+    <div id="question" class="contex-question"></div>
+    <div id="user" class="contex"></div>
+    <div id="black" class="black"></div>
+    <div id="more" class="aside"></div>
+
+    <!-- Header - Muhammed Altunisik -->
+    <header id="header__main">
+      <div class="content">
+        <nav class="main-nav">
+          <ul class="main-nav_items">
+            <li>
+              <button id="openUserModal">
+                <svg
+                  viewBox="0 0 18 18"
+                  preserveAspectRatio="xMidYMid meet"
+                  focusable="false"
+                >
+                  <g>
+                    <path
+                      d="M7.5,9A4.5,4.5,0,1,0,3,4.5,4.5,4.5,0,0,0,7.5,9Zm0-7A2.5,2.5,0,1,1,5,4.5,2.5,2.5,0,0,1,7.5,2Z"
+                    ></path>
+                    <path
+                      d="M8,10.028s-0.254-.007-0.506-0.007S7,10.023,7,10.028c-7.033.283-7,3.558-7,6.972H15C15,13.586,14.985,10.312,8,10.028ZM8,15H2.056c0.2-1.946,1.077-2.815,5.024-2.974l0.1,0H7.494l0.326,0,0.1,0c3.928,0.16,4.819,1.03,5.022,2.974H8Z"
+                    ></path>
+                  </g>
+                </svg>
+              </button>
+            </li>
+
+            <li>
+              <button id="openQuestionModal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 17">
+                  <path
+                    d="M5.193,0C0.538,0,0,2.673,0,4.684a0.978,0.978,0,0,0,1.955,0c0-1.648.225-2.729,3.238-2.729,2.852,0,2.852,1.45,2.852,2.729a1.951,1.951,0,0,1-1.29,1.675l-0.216.083C4.8,7.108,3.809,7.531,3.809,8.472v3.5a0.978,0.978,0,1,0,1.955,0V8.887c0.4-.209,1.152-0.5,1.474-0.62l0.224-.085A3.831,3.831,0,0,0,10,4.684C10,3.526,10,0,5.193,0Z"
+                  ></path>
+                  <path
+                    d="M5.366,14.943H3.982a1.029,1.029,0,0,0,0,2.057H5.366A1.029,1.029,0,1,0,5.366,14.943Z"
+                  ></path>
+                </svg>
+              </button>
+            </li>
+
+            <li>
+              <a href="profile.html">
+                <img src="images/Header/EA.png" alt="EA" />
+              </a>
+            </li>
+          </ul>
+
+          <!--           <img src="images/EA.png" alt="EA" />
+ -->
+        </nav>
+
+        <nav class="main-nav__inner">
+          <ul class="main-nav__inner-items">
+            <li>
+              <span id="btn-btn">
+                <svg
+                  class="eapl-local-nav__open-icon"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 20 16"
+                  style="enable-background: new 0 0 20 16"
+                >
+                  <path
+                    class="st0"
+                    d="M1,2h18c0.6,0,1-0.4,1-1s-0.4-1-1-1H1C0.4,0,0,0.4,0,1S0.4,2,1,2z M19,
+                                   7H1C0.4,7,0,7.4,0,8s0.4,1,1,1h18 c0.6,0,1-0.4,1-1S19.6,7,19,7z M19,
+                                   14H1c-0.6,0-1,0.4-1,1s0.4,1,1,1h18c0.6,0,1-0.4,1-1S19.6,14,19,14z"
+                  ></path>
+                </svg>
+              </span>
+            </li>
+
+            <li>
+              <button id="btn-in">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </button>
+            </li>
+
+            <li>
+              <a href="index.html" onclick="Profile()">
+                <img src="images/Header/Logo.svg" alt="Logo" />
+              </a>
+            </li>
+
+            <li>
+              <button onclick="Profile()" style="width: 6rem">
+                Games
+                <i class="fa-sharp fa-solid fa-angle-up"></i>
+
+                <div>
+                  <ul>
+                    <h3>BROWSE&nbsp;GAMES</h3>
+
+                    <li>Latest&nbsp;Games</li>
+                    <li>Coming&nbsp;Soon</li>
+                    <li>EA&nbsp;SPORTS</li>
+                    <li>Free-To-Play</li>
+                    <li>Games&nbsp;Library</li>
+                  </ul>
+
+                  <ul>
+                    <h3>PLATFORMS</h3>
+
+                    <li>PC</li>
+                    <li>PlayStation&nbsp;5</li>
+                    <li>Xbox &nbsp;Series &nbsp;X</li>
+                    <li>Nintendo&nbsp;Switch</li>
+                    <li>Mobile</li>
+                  </ul>
+                </div>
+              </button>
+            </li>
+
+            <li>
+              <button onclick="Profile()">
+                More&nbsp;Experiences
+                <i class="fa-sharp fa-solid fa-angle-up"></i>
+
+                <div>
+                  <ul>
+                    <li>EA &nbsp;Play</li>
+                    <li>Origin</li>
+                    <li>Competitive &nbsp;Gaming</li>
+                    <li>EA&nbsp;Play&nbsp;Live</li>
+                  </ul>
+                </div>
+              </button>
+            </li>
+
+            <li>
+              <button onclick="Profile()">
+                About
+                <i class="fa-sharp fa-solid fa-angle-up"></i>
+
+                <div>
+                  <ul>
+                    <li>
+                      <a href="AboutCompany.html" >
+                        Company
+                      </a>
+                    </li>
+                    <li>EA&nbsp;Studios</li>
+                    <li>Careers</li>
+                    <li>Our&nbsp;Technology</li>
+                    <li>EA&nbsp;Partners</li>
+                    <li>News</li>
+                    <li>Inside&nbsp;EA</li>
+                  </ul>
+                </div>
+              </button>
+            </li>
+
+            <li>
+              <button onclick="Profile()">
+                Commitments
+                <i class="fa-sharp fa-solid fa-angle-up"></i>
+
+                <div>
+                  <ul>
+                    <li>Positive&nbsp;Play</li>
+                    <li>Inclusion&nbsp;&&nbsp;Diversity</li>
+                    <li>Community&nbsp;Investment</li>
+                    <li>People&nbsp;&&nbsp;Culture</li>
+                    <li>Environment</li>
+                  </ul>
+                </div>
+              </button>
+            </li>
+
+            <li>
+              <button onclick="Profile()">
+                Resources
+                <i class="fa-sharp fa-solid fa-angle-up"></i>
+
+                <div>
+                  <ul>
+                    <li>Help</li>
+                    <li>Forums</li>
+                    <li>Parental&nbsp;Controls</li>
+                    <li>Accessibility</li>
+                    <li>Press</li>
+                    <li>Investors</li>
+                    <li>Playtesting</li>
+                  </ul>
+                </div>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Section One - Muhammed Altunisik -->
+      <section class="first-section">
+        <div class="image-box">
+          <img src="images/Section One/Section one (Play).svg" />
+          <button type="submit">Play Now</button>
+        </div>
+      </section>
+
+      <!-- Section Two - Andrei Barbulesco -->
+      <section></section>
+
+      <!-- Section Three - Sama Jabri -->
+      <section></section>
+
+      <!-- Section Four - Sarina Saffarpour -->
+      <section></section>
+    </main>
+
+    <!-- Footer - Sarina Saffarpour -->
+    <footer></footer>
+
+    <script type="module" src="./js/main-index.js"></script>
+  </body>
+</html>
