@@ -1,0 +1,131 @@
+@use '../general.scss' as vars;
+
+.AC-section-six {
+    @include vars.fonts("text-regular");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    background-color: white;
+    color: vars.$color-secondary;
+
+    &__header {
+        font-size: 2.5rem;
+        line-height: 3;
+        text-align: left;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.2rem 0.5rem;
+        margin: 1rem 6rem;
+    }
+
+    &__load-more {
+        border: 2px solid #eaeaea;
+        border-radius: 0.3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+        width: 85%;
+        height: 10rem;
+        text-align: center;
+        margin: 2rem 6rem;
+
+        &:hover {
+            cursor: pointer;
+            border-color: vars.$border-grey;
+
+            label {
+                transition: all 0.1s ease-out;
+                color: vars.$color-secondary;
+                margin-top: -0.1rem;
+            }
+            
+            .AC-section-six__load-more__button {
+                transition: all 0.1s ease-out;
+                width: 4rem;
+                height: 4rem;
+                fill: vars.$color-secondary;
+            }
+        }
+
+        &__button  {
+            width: 3.5rem;
+            height: 3.5rem;
+            fill: vars.$border-grey;
+        }
+
+        label {
+            @include vars.fonts("text-bold");
+            margin-top: 0.5rem;
+            font-size: 1.5rem;
+            color: vars.$border-grey;
+        }
+    }
+}
+
+@media (max-width: 785px) {
+    .AC-section-six  {
+        &__cards  {
+            gap: 0.2rem;
+            margin: 1rem 3rem; 
+        }
+
+        &__load-more  {
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: 630px) {
+    .AC-section-six  {
+        &__load-more  {
+            margin-top: 1.5rem;
+        }
+    }
+}
+    
+@media (max-width: 535px) {
+    .AC-section-six  {
+        &__load-more  {
+            width: 85%;
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .AC-section-six  {
+        &__load-more  {
+            width: 80%;
+        }
+    }
+}
+
+.dark {
+    .AC-section-six  {
+        background-color: vars.$color-secondary;
+        color: white;
+
+        &__load-more {
+            border: 2px solid #eaeaea;
+    
+            &:hover {    
+                label {
+                    color: white;
+                }
+                
+                .AC-section-six__load-more__button {
+                    fill: white;
+                }
+            }
+        }
+    }
+}

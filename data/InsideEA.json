@@ -3,6 +3,17 @@
     [
         {
             "id" : 1,
+            "link" : "https://www.ea.com/inside-ea/news/from-government-to-game-development",
+            "image" : "images/Section Three/Inside EA/Inside EA 6.jpg",
+            "alt" : "Inside EA 6",
+            "title" : "Inside EA",
+            "date" : "Oct 10, 2022",
+            "header" : "From Government to Game Development, Jessica Makes a Move.",
+            "description" : "Team culture and Dynamic were driving factors for choosing EA."
+        },
+        {
+            "id" : 2,
+            "link" : "https://www.ea.com/inside-ea/news/celebrating-6-years-of-our-purpose-beliefs-awards",
             "image" : "images/Section Three/Inside EA/Inside EA 1.png",
             "alt" : "Inside EA 1",
             "title" : "Inside EA",
@@ -11,8 +22,9 @@
             "description" : "These values are the bedrock of everything we do."
         },
         {
-            "id" : 2,
-            "image" : "images/Section Three/Inside EA/Inside EA 2.png",
+            "id" : 3,
+            "link" : "https://www.ea.com/inside-ea/news/what-makes-a-great-quality-designer",
+            "image" : "images/Section Three/Inside EA/Inside EA 2.jpg",
             "alt" : "Inside EA 2",
             "title" : "Inside EA 2024",
             "date" : "Sep 12, 2022",
@@ -20,7 +32,8 @@
             "description" : "’A key trait is the desire to learn’"
         },
         {
-            "id" : 3,
+            "id" : 4,
+            "link" : "https://www.ea.com/inside-ea/news/ea-s-summer-of-steam",
             "image" : "images/Section Three/Inside EA/Inside EA 3.png",
             "alt" : "Inside EA 3",
             "title" : "Inside EA",
@@ -29,7 +42,8 @@
             "description" : "A blog to highlight and celebrate EA support for summer programs to help young people from diverse backgrounds to develop skills in STEAM (Science, Technology, Engineering, Arts and Mathematics)."
         },
         {
-            "id" : 4,
+            "id" : 5,
+            "link" : "https://www.ea.com/inside-ea/news/rob-weber-returns-as-quality-designer",
             "image" : "images/Section Three/Inside EA/Inside EA 4.jpg",
             "alt" : "Inside EA 4",
             "title" : "Inside EA",
@@ -38,22 +52,14 @@
             "description" : "There is a lot of pride and fun working at EA - I get to work on a game that is recognized around the world."
         },
         {
-            "id" : 5,
+            "id" : 6,
+            "link" : "https://www.ea.com/inside-ea/news/how-you-dont-need-experience-to-enter-the-industry",
             "image" : "images/Section Three/Inside EA/Inside EA 5.jpg",
             "alt" : "Inside EA 5",
             "title" : "Inside EA",
             "date" : "Jul 18, 2022",
             "header" : "You don’t need gaming experience to enter the industry",
             "description" : "Barbara Homewood is currently a Quality Designer at Electronic Arts and shares her passion for technology and growth"
-        },
-        {
-            "id" : 6,
-            "image" : "images/Section Three/Inside EA/Inside EA 6.jpg",
-            "alt" : "Inside EA 6",
-            "title" : "Inside EA",
-            "date" : "May 13, 2022",
-            "header" : "EA Studios Named Best Places to Work in the U.S.",
-            "description" : "Respawn Entertainment, Maxis, and Industrial Toys earn accolades from GamesIndustry.biz"
         }
     ]
 }

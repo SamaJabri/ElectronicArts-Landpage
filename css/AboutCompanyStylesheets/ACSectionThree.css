@@ -1,0 +1,173 @@
+@font-face {
+  font-family: "ElectronicArtsTextRegular";
+  src: url("../fonts/ElectronicArtsText-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsTextBold";
+  src: url("../fonts/ElectronicArtsText-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsTextLight";
+  src: url("../fonts/ElectronicArtsText-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsDisplayBold";
+  src: url("../fonts/ElectronicArtsDisplay-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ElectronicArtsDisplayRegular";
+  src: url("../fonts/ElectronicArtsDisplay-Regular.woff2") format("woff2");
+}
+* {
+  color-scheme: light dark;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dark-mode-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 4rem;
+  height: 4rem;
+  z-index: 5;
+}
+.dark-mode-button button {
+  outline: none;
+  font-weight: 600;
+  border-radius: 2rem;
+  border: none;
+  background-color: #161616;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+.dark-mode-button button:hover {
+  cursor: pointer;
+  filter: brightness(130%);
+}
+.dark-mode-button button i {
+  font-size: 2rem;
+}
+
+.dark .dark-mode-button button {
+  color: #161616;
+  background-color: white;
+}
+
+.sections-bg {
+  background-image: url("../../images/AboutCompany/Background-Image.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.AC-section-three {
+  font-family: "ElectronicArtsTextRegular", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #161616;
+}
+.AC-section-three h2 {
+  font-size: 3.5rem;
+  color: white;
+}
+.AC-section-three__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.AC-section-three__cards .section-three__card {
+  height: 26rem;
+}
+.AC-section-three__cards .section-three__card-description {
+  padding: 0.5rem;
+}
+.AC-section-three__cards h3 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 800px) {
+  .AC-section-three {
+    height: auto;
+  }
+  .AC-section-three h2 {
+    font-size: 3rem;
+  }
+  .AC-section-three__cards {
+    margin: 0;
+    gap: 1.2rem;
+  }
+  .AC-section-three__cards .section-three__card {
+    height: auto;
+    padding: 0;
+    padding-bottom: 2rem;
+  }
+  .AC-section-three__cards .section-three__card-image {
+    width: 100%;
+    display: block;
+  }
+  .AC-section-three__cards .section-three__card-image img {
+    width: 100%;
+    height: auto;
+  }
+  .AC-section-three__cards h3 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 320px) {
+  .AC-section-three h2 {
+    font-size: 2rem;
+  }
+  .AC-section-three__cards h3 {
+    font-size: 1rem;
+  }
+}
+.dark .AC-section-three__cards {
+  color: white;
+}
+
+.dark-mode-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 4rem;
+  height: 4rem;
+  z-index: 5;
+}
+.dark-mode-button button {
+  outline: none;
+  font-weight: 600;
+  border-radius: 2rem;
+  border: none;
+  background-color: #161616;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+.dark-mode-button button:hover {
+  cursor: pointer;
+  filter: brightness(130%);
+}
+.dark-mode-button button i {
+  font-size: 2rem;
+}
+
+.dark .dark-mode-button button {
+  color: #161616;
+  background-color: white;
+}
+
+/*# sourceMappingURL=ACSectionThree.css.map */

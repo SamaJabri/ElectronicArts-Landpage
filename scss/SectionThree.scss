@@ -8,6 +8,8 @@
     justify-content: space-around;
     align-items: center;
     color: vars.$color-secondary;
+    position: relative;
+    overflow-x: hidden;
 
     &__header {
         @include vars.fonts("text-regular");
@@ -19,20 +21,24 @@
     &__list-div {
         display: flex;
         border-bottom: vars.$border-width solid vars.$focus-grey;
-        height: 3.8rem;
-        width: 100%;
+        height: 5rem;
+        width: 90%;
+        overflow: hidden;
         position: relative;
 
         ul {
             display: flex;
+            justify-content: center;
+            align-items: center;
             list-style: none;
             position: absolute;
             left: 6rem;
+            right: 0;
             height: 100%;
 
             li {
                 border-right: vars.$border-width solid vars.$focus-grey;
-                height: 30px;
+                height: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -43,45 +49,84 @@
             }
 
             button {
-                height: 60px;
+                height: 5rem;
                 background: none;
                 border: none;
                 outline: none;
                 color: vars.$focus-black;
                 padding: 0.5rem 1.4rem;
                 font-size: 1.5rem;
+                position: relative;
                 
                 &:hover {
                     @include vars.hover(vars.$focus-black, vars.$focus-grey);
                     cursor: pointer;
                 }
 
-                &:focus {
+                &.clicked {
                     cursor: pointer;
                     background-color: vars.$focus-grey;
                     color: vars.$focus-black;
-                    border-bottom: calc(vars.$border-width + 1px) solid vars.$color-tertiary;
+                    
+                    &::after {
+                        content: "";
+                        background-color: vars.$color-tertiary;
+                        height: 3px;
+                        width: 80%;
+                        position: absolute;
+                        left: 10%;
+                        bottom: 0;
+                    }
                 }
             }
         }
+    }
+    
+    &__left-arrow,
+    &__right-arrow {
+        z-index: 1;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 9.3rem;
+        background: vars.$color-primary;
+        border: none;
+        width: 5rem;
+        height: 3.5rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__left-arrow {
+        transform: rotate(90deg);
+        left: -0.9rem;
+    }
+
+    &__right-arrow {
+        transform: rotate(-90deg);
+        right: -0.9rem;
     }
 
     &__cards {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 1.2rem;
+        gap: 1.2rem 0.5rem;
         margin: 4rem 6rem;
     }
 
     &__card {
         display: flex;
         flex-direction: column;
+        position: relative;
         gap: 1rem;
-        width: 31.4%;
+        width: 31%;
         background-color: white;
-        height: 40rem;
-        transition: all 0.3s ease;
+        height: auto;
+        transition: all 0.5s ease;
         box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.5);
 
         &:hover {
@@ -97,8 +142,14 @@
             }
         }
 
+        &-link {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
         &-description {
-            padding: 0.4rem 2rem;
+            padding: 0.4rem 2rem 2rem;
             display: flex;
             flex-direction: column;
             gap: 1rem;
@@ -119,6 +170,7 @@
             @include vars.fonts('text-bold');
             line-height: 1.4;
             font-size: 1.3rem;
+            color: vars.$color-secondary;
 
             p {
                 @include vars.fonts('text-regular');
@@ -128,6 +180,7 @@
             }
         }
     }
+
     &__button {
         display: flex;
         justify-content: center;
@@ -135,8 +188,173 @@
         height: 8rem;
         width: 100%;
 
-        button {
-            @include vars.button;
+        a {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+
+            button {
+                @include vars.button;
+            }
+        }
+    }
+}
+
+@media (max-width: 1043px) {
+    .section-three {
+        &__list-div {
+            ul {
+                width: 75rem;
+                left: 4rem;
+                button {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .section-three {
+
+        &__right-arrow {
+            display: flex;
+        }
+
+        &__cards {
+            gap: 2rem 0.8rem;
+            margin: 4rem 5rem;
+        }
+
+        &__card {
+            width: 45%;
+            height: auto;
+
+            &-header {
+                font-size: 1.1rem;
+            }
+    
+            &-body {
+                line-height: 1.2;
+                font-size: 1.15rem;
+    
+                p {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .section-three {
+        &__list-div {
+            ul {
+                left: 0;
+                button {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        &__cards {
+            gap: 0rem;
+            margin: 4rem 7%;
+        }
+
+        &__card {
+            padding-top: 1.8rem;
+            width: 100%;
+            height: 25%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            &-image {
+                display: none;
+            }
+
+            &-description {
+                padding-top: 0;
+            }
+
+            &-header p {
+                display: flex;
+                flex-direction: column;
+            }
+    
+            &-body {    
+                font-size: 1.13rem;
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.dark {
+    .section-three {
+        background-color: vars.$color-secondary;
+        color: white;
+
+        &__list-div {
+            border-bottom-color: vars.$border-grey;
+    
+            ul {
+    
+                li {
+                    border-right-color: vars.$border-grey;
+                }
+    
+                button {
+                    color: white;
+                    
+                    &:hover {
+                        @include vars.hover(white, #a3a3a349);
+                    }
+    
+                    &.clicked {
+                        @include vars.hover(white, #a3a3a349);
+                    }
+                }
+            }
+        }
+
+        &__left-arrow,
+        &__right-arrow {
+            background: vars.$color-secondary;
+        }
+     
+        &__card {
+            background-color: vars.$color-black-dark;
+            box-shadow: 0 3px 10px -2px rgba(255, 255, 255, 0.1);
+    
+            &:hover {
+                box-shadow: 6px 36px 19px -2px rgba(255, 255, 255, 0.1);
+            }
+    
+            &-header {
+                span {
+                    color: white;
+                }
+            }
+    
+            &-body {
+                            color: white;
+
+                p {
+                    color: vars.$border-light-grey;
+                }
+            }
+        }
+
+        &__button {
+            button {
+                @include vars.button(white);
+            }
         }
     }
 }

@@ -1,76 +1,612 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="author" content="Electronic Arts" >
-        <meta name="title" content="Electronic Arts Home Page - Official EA Site" >
-        <meta name="description" content="We exist to inspire the world through Play. 
-        Electronic Arts is a leading publisher of games on Console, PC and Mobile." >
-        <meta name="url" content="https://www.ea.com/" >
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
 
-        <title>About EA - Electronic Arts</title>
+    <meta name="author" content="Electronic Arts">
+    <meta name="title" content="Electronic Arts Home Page - Official EA Site">
+    <meta name="description" content="We exist to inspire the world through Play. 
+        Electronic Arts is a leading publisher of games on Console, PC and Mobile.">
+    <meta name="url" content="https://www.ea.com/">
 
-        <script type="module" src="./js/generate-div.js" defer ></script>
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
+    <title>About EA - Electronic Arts</title>
 
-    <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- Header -Muhammed Altunisik - Same code as homepage -->
-        <header>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
 
-        </header>
+<body>
 
-        <main>
+    <!-- Models -->
+    <div id="vertical-line" class="vertical-line"></div>
+    <div id="question" class="contex-question"></div>
+    <div id="user" class="contex"></div>
+    <div id="black" class="black"></div>
+    <div id="more" class="aside"></div>
 
-            <!-- Section One - Muhammed Altunisik -->
-            <section>
+    <!-- Header - Muhammed Altunisik -->
+    <header id="header__main">
+        <div class="content">
+            <nav class="main-nav">
+                <ul class="main-nav_items">
+                    <li>
+                        <button id="openUserModal">
+                            <svg viewBox="0 0 18 18" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                <g>
+                                    <path
+                                        d="M7.5,9A4.5,4.5,0,1,0,3,4.5,4.5,4.5,0,0,0,7.5,9Zm0-7A2.5,2.5,0,1,1,5,4.5,2.5,2.5,0,0,1,7.5,2Z">
+                                    </path>
+                                    <path
+                                        d="M8,10.028s-0.254-.007-0.506-0.007S7,10.023,7,10.028c-7.033.283-7,3.558-7,6.972H15C15,13.586,14.985,10.312,8,10.028ZM8,15H2.056c0.2-1.946,1.077-2.815,5.024-2.974l0.1,0H7.494l0.326,0,0.1,0c3.928,0.16,4.819,1.03,5.022,2.974H8Z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </li>
 
+                    <li>
+                        <button id="openQuestionModal">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 17">
+                                <path
+                                    d="M5.193,0C0.538,0,0,2.673,0,4.684a0.978,0.978,0,0,0,1.955,0c0-1.648.225-2.729,3.238-2.729,2.852,0,2.852,1.45,2.852,2.729a1.951,1.951,0,0,1-1.29,1.675l-0.216.083C4.8,7.108,3.809,7.531,3.809,8.472v3.5a0.978,0.978,0,1,0,1.955,0V8.887c0.4-.209,1.152-0.5,1.474-0.62l0.224-.085A3.831,3.831,0,0,0,10,4.684C10,3.526,10,0,5.193,0Z">
+                                </path>
+                                <path
+                                    d="M5.366,14.943H3.982a1.029,1.029,0,0,0,0,2.057H5.366A1.029,1.029,0,1,0,5.366,14.943Z">
+                                </path>
+                            </svg>
+                        </button>
+                    </li>
+
+                    <li>
+                        <a href="profile.html">
+                            <img src="images/Header/EA.png" alt="EA" />
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <nav class="main-nav__inner">
+                <ul class="main-nav__inner-items">
+                    <li>
+                        <span id="btn-btn">
+                            <svg class="eapl-local-nav__open-icon" x="0px" y="0px" viewBox="0 0 20 16"
+                                style="enable-background: new 0 0 20 16">
+                                <path class="st0" d="M1,2h18c0.6,0,1-0.4,1-1s-0.4-1-1-1H1C0.4,0,0,0.4,0,1S0.4,2,1,2z M19,
+                                    7H1C0.4,7,0,7.4,0,8s0.4,1,1,1h18 c0.6,0,1-0.4,1-1S19.6,7,19,7z M19,
+                                    14H1c-0.6,0-1,0.4-1,1s0.4,1,1,1h18c0.6,0,1-0.4,1-1S19.6,14,19,14z"></path>
+                            </svg>
+                        </span>
+                    </li>
+
+                    <li>
+                        <button id="btn-in">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                    </li>
+
+                    <li>
+                        <a href="index.html" onclick="Profile()">
+                            <img src="images/Header/Logo.svg" alt="Logo" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <button onclick="Profile()" style="width: 6rem">
+                            Games
+                            <i class="fa-sharp fa-solid fa-angle-up"></i>
+
+                            <div>
+                                <ul>
+                                    <h3>BROWSE&nbsp;GAMES</h3>
+
+                                    <li>Latest&nbsp;Games</li>
+                                    <li>Coming&nbsp;Soon</li>
+                                    <li>EA&nbsp;SPORTS</li>
+                                    <li>Free-To-Play</li>
+                                    <li>Games&nbsp;Library</li>
+                                </ul>
+
+                                <ul>
+                                    <h3>PLATFORMS</h3>
+
+                                    <li>PC</li>
+                                    <li>PlayStation&nbsp;5</li>
+                                    <li>Xbox &nbsp;Series &nbsp;X</li>
+                                    <li>Nintendo&nbsp;Switch</li>
+                                    <li>Mobile</li>
+                                </ul>
+                            </div>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button onclick="Profile()">
+                            More&nbsp;Experiences
+                            <i class="fa-sharp fa-solid fa-angle-up"></i>
+
+                            <div>
+                                <ul>
+                                    <li>EA &nbsp;Play</li>
+                                    <li>Origin</li>
+                                    <li>Competitive &nbsp;Gaming</li>
+                                    <li>EA&nbsp;Play&nbsp;Live</li>
+                                </ul>
+                            </div>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button onclick="Profile()">
+                            About
+                            <i class="fa-sharp fa-solid fa-angle-up"></i>
+
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="AboutCompany.html">
+                                            Company
+                                        </a>
+                                    </li>
+                                    <li>EA&nbsp;Studios</li>
+                                    <li>Careers</li>
+                                    <li>Our&nbsp;Technology</li>
+                                    <li>EA&nbsp;Partners</li>
+                                    <li>News</li>
+                                    <li>Inside&nbsp;EA</li>
+                                </ul>
+                            </div>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button onclick="Profile()">
+                            Commitments
+                            <i class="fa-sharp fa-solid fa-angle-up"></i>
+
+                            <div>
+                                <ul>
+                                    <li>Positive&nbsp;Play</li>
+                                    <li>Inclusion&nbsp;&&nbsp;Diversity</li>
+                                    <li>Community&nbsp;Investment</li>
+                                    <li>People&nbsp;&&nbsp;Culture</li>
+                                    <li>Environment</li>
+                                </ul>
+                            </div>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button onclick="Profile()">
+                            Resources
+                            <i class="fa-sharp fa-solid fa-angle-up"></i>
+
+                            <div>
+                                <ul>
+                                    <li>Help</li>
+                                    <li>Forums</li>
+                                    <li>Parental&nbsp;Controls</li>
+                                    <li>Accessibility</li>
+                                    <li>Press</li>
+                                    <li>Investors</li>
+                                    <li>Playtesting</li>
+                                </ul>
+                            </div>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Section One - Muhammed Altunisik -->
+        <section>
+            <div class="about-company_top">
+                <div class="video">
+                    <video loop="loop" autoplay id="xl" preload="metadata">
+                        <source src="./images/Header/new/ea-about-top-video-sizzle-xl.webm" type="video/mp4" />
+
+                        <source src="./images/Header/new/ea-about-top-video-sizzle-xl.webm" type="video/ogg" />
+
+                        Tarayıcınız video etiketini desteklemiyor.
+                    </video>
+
+                    <img src="./images/Header/new/bbb.png" alt="eanews-logo" />
+                    <h1>
+                        Welcome to
+                        <br />
+                        <span>Electronic Arts</span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Two - Muhammed Altunisik -->
+        <section>
+            <div class="ea-store">
+                <div class="text">
+                    <div class="text-in">
+                        <h1 class="d3">About EA</h1>
+                        <p>
+                            Driven by passion, we are a global leader in digital interactive
+                            entertainment.
+                        </p>
+                        <p>
+                            Headquartered in Redwood City in Northern California, we develop
+                            and deliver games, content, and online services for
+                            Internet-connected consoles, mobile devices, and personal
+                            computers. Through our cutting-edge games, innovative services,
+                            and powerful technologies, we bring worlds with infinite
+                            possibilities&nbsp;to nearly 600 million active players and fans
+                            around the globe, and are recognized for a portfolio of
+                            critically acclaimed, high-quality brands such as EA SPORTS™
+                            FIFA, Battlefield™, Apex Legends™, The Sims™, Madden NFL, Need
+                            for Speed™, Titanfall® and F1®.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="sections-bg">
+            <!-- Section Three - Sama Jabri -->
+            <section class="AC-section-three">
+
+                <div class="dark-mode-button">
+                    <button id="dark-mode-button"><i class="fa-solid fa-moon"></i></button>
+                </div>
+
+                <h2 class="section-three__header">Our Products</h2>
+                <div class="AC-section-three__cards">
+                    <div class="section-three__card">
+                        <div class="section-three__card-image">
+                            <img src="images/AboutCompany/SectionThree/Image1.jpg" alt=" " />
+                        </div>
+
+                        <a href="https://www.ea.com/games" class="section-three__card-link"></a>
+                    
+                        <div class="section-three__card-description">
+                            <h3>
+                                Discover Our Games →
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="section-three__card">
+                        <div class="section-three__card-image">
+                            <img src="images/AboutCompany/SectionThree/Image2.jpg" alt=" " />
+                        </div>
+                    
+                        <a href="https://www.ea.com/ea-play" class="section-three__card-link"></a>
+
+                        <div class="section-three__card-description">
+                            <h3>
+                                Explore Our Subscriptions →
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="section-three__card">
+                        <div class="section-three__card-image">
+                            <img src="images/AboutCompany/SectionThree/Image3.jpg" alt=" " />
+                        </div>
+
+                        <a href="https://www.ea.com/technology" class="section-three__card-link"></a>
+                    
+                        <div class="section-three__card-description">
+                            <h3>
+                                Learn About Our Technologies →
+                            </h3>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <!-- Section Two - Muhammed Altunisik -->
+            <!-- Section Four - Muhammed Altunisik -->
             <section>
-
+                <div class="about-our">
+                    <div class="first-column">
+                        <h2 class="d4">Our People</h2>
+                        <p>
+                            Everything we do is designed to inspire the world to play, and we
+                            believe we’re at our best when we listen, learn, and empower each
+                            other. We celebrate openness and curiosity and are committed to
+                            making a positive impact in the world.&nbsp;<br />
+                        </p>
+                        <p>
+                            We hire creative, collaborative, inclusive people with diverse
+                            backgrounds who enrich our culture and challenge us to be better
+                            people and better at what we do. And we nurture inclusive leaders
+                            who foster a belonging culture – a place where everyone can
+                            thrive, fulfill their potential and make the best games. Find out
+                            what makes us different.
+                        </p>
+                        <div class="links">
+                            <a href="/careers"> Explore Careers </a>
+                            <a href="/commitments/people-and-culture">
+                                People &amp; Culture
+                            </a>
+                            <a href="/executives"> Executives </a><a
+                                href="https://ir.ea.com/corporate-governance/board-of-directors/default.aspx">
+                                Board of Directors
+                            </a>
+                        </div>
+                    </div>
+                    <div class="second-column">
+                        <h2 class="d4">Our Practices</h2>
+                        <p>
+                            We believe in the power of positive play and that being part of a
+                            gaming community should be a fun, fair, and safe experience for
+                            all. We are equally committed to building a workplace that spurs
+                            creativity and innovation and is as diverse as the communities we
+                            serve.<br />
+                        </p>
+                        <p>
+                            As a leading global entertainment business, we want to inspire
+                            through our actions and create a positive impact in the world.
+                            This isn’t a destination but an ongoing journey of transparency
+                            and continual progress. You can find out how we’re getting on, and
+                            read our Impact Report.
+                        </p>
+                        <div class="links">
+                            <a href="/commitments/positive-play"> Positive Play </a>
+                            <a href="/commitments/positive-play/parental-controls">
+                                Parental Controls
+                            </a>
+                            <a href="/news/sharing-our-2021-impact-report"> Impact Report </a>
+                            <a href="/commitments/community-investment">
+                                Community Investment
+                            </a>
+                            <a href="/commitments/environment"> Environment </a>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <div class="sections-bg">
-                <!-- Section Three - Sama Jabri -->
-                <section>
+            <!-- Section Five - Andrei Barbulescu -->
+            <section class="bodySection-cards">
+                <div class="containerCards">
+                    <h2 class="ongoingValues">Our ongoing values</h2>
+                    <ul class="cards">
+                        <li class="card">
+                            <div>
+                                <h3 class="card-title">Creativity</h3>
+                                <div class="card-content">
+                                    <p>Striving to bring imagination, original idea, and excitement to everything we do.
+                                    </p>
+                                </div>
 
-                </section>
+                        </li>
+                        <li class="card">
+                            <div>
+                                <h3 class="card-title">Pioneering</h3>
+                                <div class="card-content">
+                                    <p>Acting with the curiosity and courage that it takes to experiment, innovate, and
+                                        lead.</p>
+                                </div>
+                            </div>
 
-                <!-- Section Four - Muhammed Altunisik -->
-                <section>
+                        </li>
+                        <li class="card">
+                            <div>
+                                <h3 class="card-title">Passion</h3>
+                                <div class="card-content">
+                                    <p>We are at our best when we pursue what we love, and have fun doing it.</p>
+                                </div>
+                            </div>
 
-                </section>
+                        </li>
+                        <li class="card">
+                            <div>
+                                <h3 class="card-title">Determination</h3>
+                                <div class="card-content">
+                                    <p>Bringing focus, drive, and conviction to our actions. Thriving on the journey,
+                                        and being motivated to achieve excellence.</p>
+                                </div>
+                            </div>
 
-                <!-- Section Five - Andrei Barbulescu -->
-                <section>
+                        </li>
+                        <li class="card">
+                            <div>
+                                <h3 class="card-title">Learning</h3>
+                                <div class="card-content">
+                                    <p>Listening, having humility, being open to new ways of thinking, and looking with
+                                        a lens of inclusion. Challenging ourselves to grow and change as a company.</p>
+                                </div>
+                            </div>
 
-                </section>
+                        </li>
+                        <li class="card">
+                            <div>
+                                <h3 class="card-title">Teamwork</h3>
+                                <div class="card-content">
+                                    <p>Committed to each other, and to the accountability and integrity it takes to be a
+                                        successful diverse team.</p>
+                                </div>
+                            </div>
+
+                        </li>
+                        <div class="scrollBarCards"></div>
+            </section>
+        </div>
+
+        <!-- Section Six - Sama Jabri -->
+        <section class="AC-section-six">
+            <h2 class="AC-section-six__header">Latest EA News</h2>
+
+            <div class="AC-section-six__cards" id="AC-section-six__cards">
+                <!-- Dynamic Cards go here, generated from JSON files in the load-more.js file -->
             </div>
 
-            <!-- Section Six - Sama Jabri -->
-            <section>
+            <div class="AC-section-six__load-more" id="AC-section-six__load-more">
+                <svg viewBox="0 0 54 54" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    style="pointer-events: none; display: block;" class="AC-section-six__load-more__button" >
+                    <g>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M34.5,25.5h-6v-6c0-0.6-0.4-1-1-1 c-0.6,0-1,0.4-1,1v6h-6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h6v6c0,0.6,0.4,1,1,1c0.6,0,1-0.4,1-1v-6h6c0.6,0,1-0.4,1-1 C35.5,25.9,35.1,25.5,34.5,25.5z">
+                        </path>
+                        <path
+                            d="M27,54C12.1,54,0,41.9,0,27S12.1,0,27,0s27,12.1,27,27S41.9,54,27,54z M27,2 C13.2,2,2,13.2,2,27s11.2,25,25,25s25-11.2,25-25S40.8,2,27,2z">
+                        </path>
+                    </g>
+                </svg>
+                <label>Load More</label>
+            </div>
+        </section>
 
-            </section>
 
-            <!-- Section Seven - Andrei Barbulescu -->
-            <section>
+        <!-- Section Seven - Andrei Barbulescu -->
+        <section class="sectionSeven">
+            <div class="divSeven">
+                Key Information
+            </div></br>
+            <span class="sSectionSeven">
+                <div class="doSectionSeven">Founded</div>
+                <div class="dtSectionSeven">1982</div>
+            </span>
+            <span class="sSectionSeven">
+                <div class="doSectionSeven"> Ownership</div>
+                <div class="dtSectionSeven"> Public</div>
+            </span>
+            <span class="sSectionSeven">
+                <div class="doSectionSeven"> Global Headquarters</div>
+                <div class="dtSectionSeven"> Redwood City, California</div>
+            </span>
+            <span class="sSectionSeven">
+                <div class="doSectionSeven"> Address</div>
+                <div class="dtSectionSeven"> Electronic Arts Inc. 209 Redwood Shores Parkway Redwood City, CA 94065
+                </div>
+            </span>
+            <span class="sSectionSeven">
+                <div class="doSectionSeven"> Consumer Purchases</div>
+                <div class="dtSectionSeven">Residents in the United States, Canada or Japan contract with Electronic
+                    Arts Inc., 209 Redwood Shores Parkway, Redwood City, CA 94065, USA. Residents in any other country,
+                    then this Agreement is between you and EA Swiss Sàrl, Place du Molard 8, 1204, Geneva, Switzerland
+                    (CH-660-2328005-8).</div>
+            </span>
+        </section>
 
-            </section>
+    </main>
 
-        </main>
+    <!-- Footer - Andrei Barbulescu : Take from Sarina - Contact team leader when you reach this section -->
+    <footer class="footerAC">
+        <div class="sectionOneFooter">
+            <div class="divOneSectionOne-footer">
+                <ul class="ulFooter">
+                    <li class="liFooter1"><a href="link" class="link-div-one">Careers</a></li>
+                    <li class="liFooter2"><a href="link" class="link-div-one">Executives</a></li>
+                    <li class="liFooter3"><a href="link" class="link-div-one">Impact Report</a></li>
+                    <li class="liFooter4"><a href="link" class="link-div-one">Our Commitments</a></li>
+                    <li class="liFooter5"><a href="link" class="link-div-one">Partner With Us</a></li>
 
-        <!-- Footer - Andrei Barbulescu : Take from Sarina - Contact team leader when you reach this section -->
-        <footer>
+                </ul>
+            </div>
+            <div class="divTwoSectionOne-footer">
+                <div class="joinText">
+                    Join The Conversation
+                </div>
+                <div class="social-media-links">
+                    <a href="link"><img class="social-media1" src="./images/Footer/fb.png" /></a>
+                    <a href="link"><img class="social-media2" src="./images/Footer/twitter.png" /></a>
+                    <a href="link"><img class="social-media3" src="./images/Footer/youtube.png" /></a>
+                    <a href="link"><img class="social-media4" src="./images/Footer/instagram.png" /></a>
+                    <a href="link"><img class="social-media5" src="./images/Footer/twitch.png" /></a>
+                </div>
 
-        </footer>
+
+            </div>
+
+        </div>
+
+        <div class="sectionTwoFooter">
+            <div class="divOneSectionTwo-footer">
+
+                <a href="link"><img src=".\images\Footer\october-ea-ring.png" alt="ea-logo" class="ea-logo"></a>
+
+
+                <span class="spanEA-links1-footer">
+                    <a href="/games/library" title="Game Library" class="links-section-two">
+                        <span class="eapl-link__text1">Game Library</span>
+                    </a>
+                    <a href="/subscribe" title="Subscribe" class="links-section-two">
+                        <span class="eapl-link__text1">Subscribe</span>
+                    </a>
+                    <a href="/ReedemCode" title="ReedemCode" class="links-section-two">
+                        <span class="eapl-link__text1">ReedemCode</span>
+                    </a>
+                    <a href="/EA_App" title="EA_App" class="links-section-two">
+                        <span class="eapl-link__text1">EA App</span>
+                    </a>
+                    <a href="/About" title="About" class="links-section-two">
+                        <span class="eapl-link__text1">About</span>
+                    </a>
+                    <a href="/Accessibility" title="Accessibility" class="links-section-two">
+                        <span class="eapl-link__text1">Accessibility</span>
+                    </a>
+                    <a href="/Help" title="Help" class="links-section-two">
+                        <span class="eapl-link__text1">Help</span>
+                    </a>
+                </span>
+
+
+                <span class="dropup-container">
+                    <span class="dropup-button" id="lang-drop-button">
+                        <button class="dropbtn">Language</button>
+                        <div class="dropup-content" id="lang-drop">
+
+                        </div>
+                    </span>
+                </span>
+            </div>
+
+            <div class="divTwoSectionTwo-footer">
+                <a href="/Impressum" title="Impressum" class="links-section-two">
+                    <span class="eapl-link__text2">Impressum</span>
+                </a>
+                <a href="/LegalAndPrivacy" title="LegalAndPrivacy" class="links-section-two">
+                    <span class="eapl-link__text2">Legal & Privacy</span>
+                </a>
+                <a href="/UserAgreement" title="UserAgreement" class="links-section-two">
+                    <span class="eapl-link__text2">User Agreement</span>
+                </a>
+                <a href="/PrivacyAndCookies" title="PrivacyAndCookies" class="links-section-two">
+                    <span class="eapl-link__text2">Privacy & Cookie Policy (Your Privacy Rights)
+                    </span>
+                </a>
+                <a href="/OnlineServiceUpdates" title="OnlineServiceUpdates" class="links-section-two">
+                    <span class="eapl-link__text2">Online Service Updates</span>
+                </a>
+                <a href="/Security" title="Security" class="links-section-two">
+                    <span class="eapl-link__text2">Security</span>
+                </a>
+                <a href="/YouTubeTerms" title="YouTubeTerms" class="links-section-two">
+                    <span class="eapl-link__text2">YouTube Terms of Service</span>
+                </a>
+                <a href="/GooglePrivacyPolicy" title="Google Privacy Policy" class="links-section-two">
+                    <span class="eapl-link__text2">Google Privacy Policy</span>
+                </a>
+                <a href="/CookiePreferences" title="CookiePreferences" class="links-section-two">
+                    <span class="eapl-link__text2">Cookie Preferences</span>
+                </a>
+                <p class="credits-ea">© 2022 Electronic Arts Inc.</p>
+            </div>
+        </div>
         
-    </body>
+
+
+    </footer>
+
+    <script type="module" src="./js/main-about.js"></script>
+</body>
+
 </html>

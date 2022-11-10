@@ -1,0 +1,147 @@
+@use '../general.scss' as vars;
+
+.sections-bg {
+    background-image: url('../../images/AboutCompany/Background-Image.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.AC-section-three {
+    @include vars.fonts();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //height: 100vh;
+    color: vars.$color-secondary;
+
+    h2 {
+        font-size: 3.5rem;
+        color: white;
+    } 
+
+    &__cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        .section-three__card {
+            height: 26rem;
+
+            &-description {
+                padding: 0.5rem;
+            }
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .AC-section-three {
+        height: auto;
+
+        h2 {
+            font-size: 3rem;
+        } 
+
+        &__cards {
+            margin: 0;
+            gap: 1.2rem;
+
+            .section-three__card {
+                height: auto;
+                padding: 0;
+                padding-bottom: 2rem;
+
+                &-image {
+                    width: 100%;
+                    display: block;
+
+                    img {
+                        width: 100%;
+                        height:auto;
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .AC-section-three {
+        h2 {
+            font-size: 2rem;
+        } 
+
+        &__cards {
+            h3 {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.dark {
+    /* .sections-bg {
+        filter: grayscale(0.2);
+    } */
+    
+    .AC-section-three {
+        &__cards {
+            color: white;
+        }
+    }
+}
+
+// Dark mode
+.dark-mode-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: 5;
+
+    button {
+        outline: none;
+        font-weight: 600;
+        border-radius: 2rem;
+        border: none;
+        background-color: vars.$color-secondary;
+        color: white;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+            cursor: pointer;
+            filter: brightness(130%);
+        }
+
+        i {
+            font-size: 2rem;
+        }
+    }
+}
+
+.dark {
+    .dark-mode-button {
+        button {
+            color: vars.$color-secondary;
+            background-color: white;
+        }
+    }
+}

@@ -1,0 +1,230 @@
+@import "../general.scss";
+//@import "../Header.scss";
+
+$string: "display-regular";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @include fonts($string);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  width: 100%;
+
+  main {
+    section {
+      .about-company_top {
+        .video {
+          position: relative;
+          width: 100%;
+          height: 80%;
+
+          
+          video {
+            width: 100%;
+            height: 80%;
+          }
+
+          img {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+
+            @media screen and (max-width: 800px) {
+              width: 30rem;
+            }
+            @media screen and (max-width: 400px) {
+              width: 15rem;
+            }
+          }
+
+          h1 {
+            color: $color-primary;
+            text-shadow: 0 2px 10px rgb(0 0 0 / 35%);
+            font-size: 4.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+            @media screen and (max-width: 1200px) {
+              font-size: 4rem;
+            }
+            @media screen and (max-width: 800px) {
+              font-size: 3rem;
+            }
+            @media screen and (max-width: 400px) {
+              font-size: 1rem;
+            }
+            
+            span {
+              font-size: 6rem;
+              @media screen and (max-width: 1200px) {
+                font-size: 5rem;
+              }
+              @media screen and (max-width: 800px) {
+                font-size: 4rem;
+              }
+              @media screen and (max-width: 400px) {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    section {
+      .ea-store {
+        background-image: url(../../images/Header/new/ea-about-sectionbg-xl.jpg.adapt.1920w.jpg);
+        min-height: 35rem;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        color: black;
+
+        @media screen and (max-width: 800px) {
+          //height: 50%;
+          background-size: 100% 250vh;
+          background-image: url(../../images/Header/new/ea-about-20w.jpg);
+        }
+
+        .text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          width: 100%;
+          //height: 100%;
+
+          @media screen and (max-width: 800px) {
+            //margin-top: 3rem;
+          }
+
+          &-in {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: space-around;
+            line-height: 1.7;
+
+
+            @media screen and (max-width: 800px) {
+              width: 90%;
+              margin-top: 20rem;
+              margin-bottom: 5rem;
+              height: 100%;
+            }
+
+            @media screen and (max-width: 600px) {
+              //margin-top: 65rem;
+            }
+
+            h1 {
+              font-size: 3rem;
+
+              @media screen and (max-width: 1200px) {
+                font-size: 3rem;
+              }
+              @media screen and (max-width: 600px) {
+                font-size: 1.5rem;
+              }
+              @media screen and (max-width: 900px) {
+                font-size: 2rem;
+              }
+            }
+
+            p {
+              font-size: 1.5rem;
+              //color: $color-secondary;
+              font-weight: 400;
+
+              @media screen and (max-width: 1200px) {
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    section {
+      .about-our {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        font-size: 1.5rem;
+        color: white;
+
+        @media screen and (max-width: 800px) {
+          //margin-top: 50rem;
+          flex-direction: column;
+        }
+
+        p {
+          margin-top: 2rem;
+        }
+        .links {
+          margin-top: 1rem;
+          display: flex;
+          gap: 1rem;
+          flex-wrap: wrap;
+
+          a {
+            color: white;
+            margin-right: 1rem;
+            text-decoration: none;
+            position: relative;
+
+            &::after {
+              content: "";
+              background-color: white;
+              height: 3px;
+              width: 100%;
+              position: absolute;
+              left: -1%;
+              bottom: -4px;
+            }
+
+            &:hover {
+              transition: all 0.2s ease;
+              color: $color-tertiary;
+
+              &::after {
+                width: 105%;
+                left: -3%;
+                transition: all 0.2s ease;
+                background-color: $color-tertiary;
+              }
+            }
+          }
+        }
+
+        .first-column {
+          padding: 4rem;
+
+          flex: 50%;
+        }
+        .second-column {
+          padding: 4rem;
+          flex: 50%;
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  .ea-store {
+    filter: brightness(0.7);
+  }
+}

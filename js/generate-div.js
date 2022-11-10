@@ -1,92 +1,93 @@
+/* JSON Files */
+import EANews from './../data/EANews.json' assert {type: 'json'};
+import EAPlay from './../data/EAPlay.json' assert {type: 'json'};
+import FIFA from './../data/FIFA.json' assert {type: 'json'};
+import F1 from './../data/F1.json' assert {type: 'json'};
+import MaddenNFL from './../data/MaddenNFL.json' assert {type: 'json'};
+import ApexLegends from './../data/ApexLegends.json' assert {type: 'json'};
+import TheSims4 from './../data/TheSims4.json' assert {type: 'json'};
+import Battlefield from './../data/Battlefield.json' assert {type: 'json'};
+import InsideEA from './../data/InsideEA.json' assert {type: 'json'}; 
 
-fetch('./data/EANews.json')
-.then(response => response.json())
-.then(parsed => {
-    console.log(parsed.data);
-/*     console.log(parsed.data[card].image);
- */
-    for(const card in parsed.data) {
-    `<div class="section-three__card">
-        <div class="section-three__card-image">
-            <img src=${parsed.data[card].image} alt=${parsed.data[card].alt} />
-        </div>
+/* Modules */
+import store from './store.js';
+import functions from './functions.js';
+import vars from './DOM-elements.js';
 
-        <div class="section-three__card-description">
-            <div class="section-three__card-header">
-                <p>
-                    ${parsed.data[card].title}
-                    <span>${parsed.data[card].date}</span>
-                </p>
-            </div>
-            <div class="section-three__card-body">
-                <h2>${parsed.data[card].header}</h2>
-                <p>${parsed.data[card].description}</p>
-            </div>
-        </div>
-    </div>`
+
+// Generate the divs in homepage third section from local storage data     
+const items = () => store.get("model").items.map( 
+    (data) => functions.renderCard(data)
+); 
+
+// List of buttons 
+const buttons = [
+    vars.eaNewsButton,
+    vars.eaPlayButton,
+    vars.fifaButton,
+    vars.f1Button,
+    vars.maddenNFLButton,
+    vars.apexLegendsButton,
+    vars.theSimsButton,
+    vars.battlefieldButton,
+    vars.insideEAButton
+];
+
+// Loading data to HTML functions 
+const loadItemsToHTML = (data, buttonClicked) => (e) => {
+    // Give styling to clicked button and remove from others
+    buttons.forEach((button) => 
+        button !== buttonClicked 
+        ? button.classList.remove('clicked') 
+        : buttonClicked.classList.add('clicked')
+    );
+    
+    // Change data in LS according to user choosing
+    store.changeDisplayedModel(data);
+    vars.sectionThreeItemsDOM.innerHTML = items()
+};
+
+functions.addClickELToButton(buttons[0], loadItemsToHTML(EANews, buttons[0]));
+functions.addClickELToButton(buttons[1], loadItemsToHTML(EAPlay, buttons[1]));
+functions.addClickELToButton(buttons[2], loadItemsToHTML(FIFA, buttons[2]));
+functions.addClickELToButton(buttons[3], loadItemsToHTML(F1, buttons[3]));
+functions.addClickELToButton(buttons[4], loadItemsToHTML(MaddenNFL, buttons[4]));
+functions.addClickELToButton(buttons[5], loadItemsToHTML(ApexLegends, buttons[5]));
+functions.addClickELToButton(buttons[6], loadItemsToHTML(TheSims4, buttons[6]));
+functions.addClickELToButton(buttons[7], loadItemsToHTML(Battlefield, buttons[7]));
+functions.addClickELToButton(buttons[8], loadItemsToHTML(InsideEA, buttons[8]));
+
+// Scrolling through list on smaller screens 
+const hideArrowWhenReachingEnd = () => {
+    let firstListItemCoordinates = vars.firstListItem.getBoundingClientRect();
+
+    if(firstListItemCoordinates.left > 0) {
+        functions.hideElement(vars.leftArrow);
     }
-});
+    else if (firstListItemCoordinates.left > -400) {
+        functions.hideElement(vars.rightArrow);
+    }
 
-
-let sectionThreeCards = document.getElementById('section-three-cards');
-
-let eaNewsButton = document.getElementById('EA-News');
-let eaPlayButton = document.getElementById('EA-Play');
-let fifaButton = document.getElementById('FIFA');
-let f1Button = document.getElementById('F1');
-let maddenNFLButton = document.getElementById('Madden-NFL');
-let apexLegendsButton = document.getElementById('Apex-Legends');
-let theSimsButton = document.getElementById('The-Sims-4');
-let battlefieldButton = document.getElementById('Battlefield');
-let insideEAButton = document.getElementById('Inside-EA');
-
-const generateDiv = () => {
-    let sectionThreeCard =  document.createElement("div");
-    sectionThreeCard.className = "section-three__card";
-
-    /* Image */ 
-    let sectionThreeImageDiv = document.createElement("div");
-    sectionThreeImageDiv.className = "section-three__card-image";
-    let sectionThreeImage = document.createElement("img");
-    sectionThreeImage.src = "images/Section Three/EA News 1.png";
-    sectionThreeImageDiv.append(sectionThreeImage);
-
-    /* Description */
-    let sectionThreeDescription = document.createElement("div");
-    sectionThreeDescription.className = "section-three__card-description";
-
-    let sectionThreeHeader = document.createElement("div");
-    sectionThreeHeader.className = "section-three__card-header";
-    sectionThreeHeaderP = document.createElement("p");
-    sectionThreeHeaderP.innerText = "Electronic Arts Inc.";
-    sectionThreeHeaderSpan = document.createElement("span");
-    sectionThreeHeaderSpan.innerText = "Aug 2, 2022";
-
-    sectionThreeHeader.appendChild(sectionThreeHeaderP);
-    sectionThreeHeaderP.appendChild(sectionThreeHeaderSpan);
-
-    let sectionThreeBody = document.createElement("div");
-    sectionThreeBody.className = "section-three__card-body";
-    let sectionThreeBodyh2 = document.createElement("h2");
-    sectionThreeBodyh2.innerText = "Electronic Arts Reports Q1 FY23 Financial Results";
-    let sectionThreeBodyP = document.createElement("p");
-    sectionThreeBodyP.innerText = "Electronic Arts Inc. (NASDAQ: EA) today announced preliminary financial results for its first fiscal quarter ended June 30, 2022.";
-
-    sectionThreeBody.appendChild(sectionThreeBodyh2);
-    sectionThreeBody.appendChild(sectionThreeBodyP);
-
-    sectionThreeDescription.appendChild(sectionThreeHeader);
-    sectionThreeDescription.appendChild(sectionThreeBody);
-
-    sectionThreeCard.appendChild(sectionThreeImageDiv);
-    sectionThreeCard.appendChild(sectionThreeDescription);
-    sectionThreeCards.appendChild(sectionThreeCard);
+    console.log(firstListItemCoordinates.left);
 }
 
-eaNewsButton.addEventListener('click', () => {
-    for (let i = 0; i < 3; i++) {
-        generateDiv();
-    }
-} );
+let scrollContainer = function(container, direction) {
+    let amount = direction * (container.scrollWidth - 600);
+    container.scrollBy({
+        top: 0,
+        left: amount,
+        behavior: 'smooth'
+    });
+}
 
+functions.addClickELToButton(vars.leftArrow, () => {
+    hideArrowWhenReachingEnd();
+    functions.displayFlex(vars.rightArrow);
+    scrollContainer(vars.sliderContainer, -1);
+});
 
+functions.addClickELToButton(vars.rightArrow, () => {
+    hideArrowWhenReachingEnd();
+    functions.displayFlex(vars.leftArrow);
+    scrollContainer(vars.sliderContainer, 1);
+});

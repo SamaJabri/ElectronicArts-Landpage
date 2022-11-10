@@ -3,8 +3,9 @@
     [
         {
             "id" : 1,
+            "link" : "https://www.ea.com/games/madden-nfl/madden-nfl-22/news/get-more-madden22-with-ea-play",
             "image" : "images/Section Three/EAPlay/EA Play 1.jpg",
-            "alt" : "EA Play 1",
+            "alt" : "EA Play",
             "title" : "Madden NFL",
             "date" : "Feb 17, 2022",
             "header" : "Get More Madden NFL 22 With EA Play",
@@ -12,45 +13,50 @@
         },
         {
             "id" : 2,
+            "link" : "https://www.ea.com/ea-play/news/mass-effect-legendary-edition-ea-play-pro",
             "image" : "images/Section Three/EAPlay/EA Play 2.jpg",
-            "alt" : "EA Play 2",
-            "title" : "Madden NFL",
+            "alt" : "EA Play",
+            "title" : "Electronic Arts Inc.",
             "date" : "May 14, 2021",
             "header" : "Play the Mass Effect Legendary Edition with EA Play* Pro",
             "description" : "Experience the cinematic saga now remastered and optimized for 4K Ultra HD"
         },
         {
             "id" : 3,
+            "link" : "https://www.ea.com/games/fifa/fifa-21/news/get-more-fifa21-with-ea-play",
             "image" : "images/Section Three/EAPlay/EA Play 3.jpg",
-            "alt" : "EA Play 3",
-            "title" : "Madden NFL",
+            "alt" : "EA Play",
+            "title" : "FIFA",
             "date" : "May 3, 2021",
             "header" : "Get More FIFA 21 With EA Play - EA SPORTS Official Site",
             "description" : "FIFA 21 is now on the Play List with EA Play."
         },
         {
             "id" : 4,
+            "link" : "https://www.ea.com/ea-play/news/ea-play-spotlight-april2021",
             "image" : "images/Section Three/EAPlay/EA Play 4.jpg",
-            "alt" : "EA Play 4",
-            "title" : "Madden NFL",
+            "alt" : "EA Play",
+            "title" : "Electronic Arts Inc.",
             "date" : "Apr 1, 2021",
             "header" : "EA Play Spotlight - April 2021",
             "description" : "Learn all about the latest games and rewards now available with your EA Play membership."
         },
         {
             "id" : 5,
+            "link" : "https://www.ea.com/ea-play/news/ea-app-open-beta",
             "image" : "images/Section Three/EAPlay/EA Play 5.jpg",
-            "alt" : "EA Play 5",
-            "title" : "Madden NFL",
+            "alt" : "EA Play",
+            "title" : "Electronic Arts Inc.",
             "date" : "Mar 18, 2021",
             "header" : "EA Play Now Available on Xbox Game Pass for PC via the EA app",
             "description" : "The EA app, our next-generation PC platform, is in open beta, we’re joining forces with Xbox to give more games to PC players."
         },
         {
             "id" : 6,
+            "link" : "https://www.ea.com/ea-play/news/ea-play-spotlight-march2021",
             "image" : "images/Section Three/EAPlay/EA Play 6.jpg",
-            "alt" : "EA Play 6",
-            "title" : "Madden NFL",
+            "alt" : "EA Play",
+            "title" : "Electronic Arts Inc.",
             "date" : "Mar 1, 2021",
             "header" : "EA Play Spotlight - March 2021",
             "description" : "Learn all about the latest rewards and games now available with your EA Play or EA Play Pro membership."
