@@ -49,7 +49,7 @@ body {
 #question {
   display: none;
   position: absolute;
-  top: 3%;
+  top: 2.5rem;
   width: 100%;
   height: 50vh;
   background-color: #161616;
@@ -194,7 +194,7 @@ body {
   height: 100vh;
   position: absolute;
   z-index: 9;
-  top: 40px;
+  top: 2.5rem;
   background-color: white;
 }
 .vertical-line .vertical-in {
@@ -285,7 +285,7 @@ body {
 .contex {
   display: none;
   position: absolute;
-  top: 3%;
+  top: 2.5rem;
   width: 100%;
   height: 50vh;
   background-color: #161616;
@@ -382,7 +382,7 @@ body {
   height: 100%;
   background-color: white;
   position: fixed;
-  top: 3.4%;
+  top: 2.5rem;
   z-index: 2;
   overflow: scroll;
 }
