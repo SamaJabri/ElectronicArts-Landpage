@@ -49,7 +49,7 @@ body {
 #question {
   display: none;
   position: absolute;
-  top: 2.5rem;
+  top: 2.3rem;
   width: 100%;
   height: 50vh;
   background-color: #161616;
@@ -285,7 +285,7 @@ body {
 .contex {
   display: none;
   position: absolute;
-  top: 2.5rem;
+  top: 2.3rem;
   width: 100%;
   height: 50vh;
   background-color: #161616;

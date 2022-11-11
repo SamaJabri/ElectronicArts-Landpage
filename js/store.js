@@ -36,11 +36,13 @@ const renderModel = (modelContainer, modelItems, hideBg = null) => {
 
   if(model.isModalSettingsOpen) {
     modelContainer.style.display = 'block';
-    model.items = modelItems;
+    //model.items = modelItems;
+    model = set("model", { ...model, items : modelItems });
   }
   else {
     modelContainer.style.display = "none";
-    model.items = '';
+    //model.items = '';
+    model = set("model", { ...model, items : '' })
   }
 
   modelContainer.innerHTML = model.items;
